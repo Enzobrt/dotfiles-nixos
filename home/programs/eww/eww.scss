@@ -1,0 +1,59 @@
+@import "tokyo-night.scss";
+
+* {
+  font-family: "JetBrains Mono Nerd Font";
+}
+
+window {
+  background: transparent;
+}
+
+.bar {
+  background: $bg;
+  color: $fg;
+}
+
+.workspace {
+  color: $comment;
+}
+
+.workspace.active {
+  color: $blue;
+}
+
+.cpu {
+  color: $cyan;
+}
+
+.memory {
+  color: $purple;
+}
+
+.clock {
+  color: $blue;
+}
+
+.volume {
+  color: $green;
+}
+
+.warning {
+  color: $yellow;
+}
+
+.error {
+  color: $red;
+}
+
+.toggl-window {
+  background-color: #1e1e2e;
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #45475a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.timer {
+  font-weight: bold;
+  color: #a6e3a1; /* Green */
+}

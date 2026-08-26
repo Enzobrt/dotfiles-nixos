@@ -1,0 +1,11 @@
+{
+    "plugins": {},
+    "customCspRules": {
+        "img2.wallspic.com": [
+            "connect-src",
+            "img-src",
+            "style-src",
+            "font-src"
+        ]
+    }
+}

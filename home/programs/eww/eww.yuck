@@ -1,0 +1,14 @@
+(defpoll timer :interval 1
+  `tail -n 1 /home/enzo/Documents/Programación/scripts/toggl_time.txt`)
+
+(defwindow toggl-widget
+           :monitor 0
+           :geometry (geometry :x "1%"
+                               :y "50px"
+                               :width "10%"
+                               :height "60px"
+                               :anchor "bottom right")
+           :stacking "fg"
+           :windowtype "normal"
+           :wm-ignore false
+  timer)
