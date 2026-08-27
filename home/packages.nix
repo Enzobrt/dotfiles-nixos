@@ -148,6 +148,7 @@ in
     ## Programming
     python313
     python313Packages.pandas
+    python313Packages.pygame
     go
   ];
   
