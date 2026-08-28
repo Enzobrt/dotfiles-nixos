@@ -45,8 +45,27 @@
   };
 
   # Allows for executing binaries compiled for generic Linux distributions
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
 
+    libraries = with pkgs; [
+      libGL
+      libglvnd
+      mesa
+      SDL2
+      alsa-lib
+      libpulseaudio
+      libX11
+      libXext
+      libXcursor
+      libXi
+      libXrandr
+      libXinerama
+      libxcb
+      zlib
+    ];
+  };
+ 
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
