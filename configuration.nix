@@ -167,13 +167,18 @@
     max-free = ${toString (1024 * 1024 * 1024)}
   '';
 
+  # Disable xterm
+  services.xserver.desktopManager.xterm.enable = false;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # Exclude system pkgs here ↓
+  services.xserver.excludePackages = with pkgs; [
+    xterm
+  ];
 
-  # Exclude pkgs here ↓
+  # Exclude gnome environment pkgs here ↓
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
     gnome-user-docs
@@ -181,7 +186,7 @@
     xterm
   ];
   
-  # Install pkgs here ↓
+  # Install gnome environment pkgs here ↓
   environment.systemPackages = with pkgs; [
     keyd
     android-studio
