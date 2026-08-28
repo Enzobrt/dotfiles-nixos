@@ -120,11 +120,6 @@ in
 
     alejandra
 
-    android-tools
-
-    waydroid
-    waydroid-helper
-
     wget
     curl
     unzip

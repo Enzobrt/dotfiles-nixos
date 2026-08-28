@@ -150,9 +150,6 @@
 
   nixpkgs.config.android_sdk.accept_license = true;
 
-  # Waydroid
-  virtualisation.waydroid.enable = true;
-
   # Scheduled garbage collecting
   nix.gc = {
     automatic = true;
@@ -185,6 +182,8 @@
   # Install pkgs here ↓
   environment.systemPackages = with pkgs; [
     keyd
+    android-studio
+    android-tools
 
     # Gnome extensions
     gnomeExtensions.lan-ip-address
