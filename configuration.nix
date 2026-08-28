@@ -44,6 +44,9 @@
     loader.timeout = 5;
   };
 
+  # Allows for executing binaries compiled for generic Linux distributions
+  programs.nix-ld.enable = true;
+
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;

@@ -81,7 +81,7 @@ in
     gamemode
     tinywii
 
-    mindustry
+    #mindustry-wrapper
 
     steam
     modrinth-app
