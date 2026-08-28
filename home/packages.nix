@@ -142,6 +142,8 @@ in
     fd
     ripgrep
 
+    zenity
+
     #impala
     #iwd # Enable at your own risk
     

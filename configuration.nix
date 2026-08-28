@@ -61,8 +61,10 @@
       libXi
       libXrandr
       libXinerama
+      libXext
       libxcb
       zlib
+      stdenv.cc.cc.lib
     ];
   };
  
