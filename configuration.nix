@@ -191,12 +191,18 @@
       25565
       8384
       22000
+
+      # Mindustry
+      6567
     ];
 
     allowedUDPPorts = [
       25565
       21027
       22000
+
+      # Mindustry
+      6567
     ];
 
     allowedTCPPortRanges = [
