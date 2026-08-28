@@ -11,6 +11,7 @@
     ./programs/bash.nix
     ./programs/xdg.nix
     ./programs/git.nix
+    ./programs/ssh.nix
 
     ./programs/neovim.nix
     ./programs/ghostty.nix
