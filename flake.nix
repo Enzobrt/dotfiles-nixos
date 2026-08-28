@@ -11,27 +11,31 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
-    {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+  {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
 
-        modules = [
-          ./configuration.nix
+      modules = [
+        ./configuration.nix
 
-          home-manager.nixosModules.home-manager
+        home-manager.nixosModules.home-manager
 
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
 
-            home-manager.extraSpecialArgs = {
-              colors = import ./home/colors.nix;
-            };
+          home-manager.extraSpecialArgs = {
+            colors = import ./home/colors.nix;
+          };
 
-            home-manager.users.enzo = import ./home/home.nix;
-          }
-        ];
-      };
+          home-manager.users.enzo = { config, lib, pkgs, ... }: {
+            imports = [
+              ./home/home.nix
+            ];
+          };
+        }
+      ];
     };
+  };
 }

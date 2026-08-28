@@ -20,9 +20,6 @@
     ./programs/fzf.nix
     ./programs/btop.nix
     #./programs/vesktop.nix # No usar, hace que tengas que volver a configurar vesktop
-
-    ./programs/android.nix
-
   ];
 
   home.username = "enzo";

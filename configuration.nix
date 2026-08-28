@@ -67,7 +67,7 @@
       stdenv.cc.cc.lib
     ];
   };
- 
+
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
@@ -142,11 +142,16 @@
   users.users."enzo" = {
     isNormalUser = true;
     description = "enzo";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "kvm" ];
     packages = with pkgs; [
     #  thunderbird
     ];
   };
+
+  nixpkgs.config.android_sdk.accept_license = true;
+
+  # Waydroid
+  virtualisation.waydroid.enable = true;
 
   # Scheduled garbage collecting
   nix.gc = {

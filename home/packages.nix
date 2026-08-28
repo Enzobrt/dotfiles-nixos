@@ -120,6 +120,11 @@ in
 
     alejandra
 
+    android-tools
+
+    waydroid
+    waydroid-helper
+
     wget
     curl
     unzip
@@ -133,7 +138,6 @@ in
     openjdk
     bat
     plocate
-    android-tools
     arandr
     tree-sitter
     eww
