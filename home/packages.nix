@@ -147,10 +147,13 @@ in
     #iwd # Enable at your own risk
     
     ## Programming
-    python313
-    python313Packages.pandas
-    python313Packages.pygame
     go
+    (python313.withPackages (ps: with ps; [
+      pandas
+      pygame
+      matplotlib
+      mplcursors
+    ]))
   ];
   
   home.file.".local/share/applications/es-de.desktop".text = ''
