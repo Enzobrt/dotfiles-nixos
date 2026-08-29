@@ -10,9 +10,14 @@
       };
       safe.directory = "/etc/nixos";
       init.defaultBranch = "main";
-    };
-    extraConfig = {
-      url."git@github.com:".insteadOf = "https://github.com/";
+      url."git@github.com:".insteadOf = [
+        "https://github.com/"
+        "http://github.com/"
+      ];
+      core.askPass = "";
+      credential.helper = "";
+      diff.tool = "nvimdiff";
+      difftool.nvimdiff.cmd = "nvim -d \"$LOCAL\" \"$REMOTE\"";
     };
   };
 }
