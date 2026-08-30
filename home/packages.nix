@@ -154,6 +154,7 @@ in
       matplotlib
       mplcursors
       numpy
+      keyboard
     ]))
   ];
   
