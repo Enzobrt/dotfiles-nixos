@@ -153,6 +153,7 @@ in
       pygame
       matplotlib
       mplcursors
+      numpy
     ]))
   ];
   
