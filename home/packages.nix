@@ -120,6 +120,8 @@ in
 
     alejandra
 
+    hyprpicker
+
     wget
     curl
     unzip
