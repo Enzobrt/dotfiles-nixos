@@ -89,6 +89,7 @@ in
 
     retroarch-full
     es-de
+    rpcs3
     ryubing
 
     ## Media
