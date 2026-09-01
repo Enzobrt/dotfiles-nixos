@@ -60,11 +60,18 @@
       libXcursor
       libXi
       libXrandr
+      libXfixes
+      libXrender
       libXinerama
-      libXext
       libxcb
       zlib
       stdenv.cc.cc.lib
+      fontconfig
+      freetype
+      glib
+      pango
+      cairo
+      dbus
     ];
   };
 
