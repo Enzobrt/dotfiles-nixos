@@ -157,6 +157,12 @@
     options = "--delete-generations +10"; # Or use a custom script for count-based pruning
   };
 
+  # Hardware settings
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # Scheduled optimise
   nix.optimise.automatic = true;
   nix.optimise.dates = [ "Mon 04:00" "Fri 04:00" ]; # Optional; allows customizing optimisation schedule

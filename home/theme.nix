@@ -2,9 +2,21 @@
 
 {
   home.packages = with pkgs; [
+    # Fonts
     nerd-fonts.jetbrains-mono
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    liberation_ttf
+    dejavu_fonts
+
+
+    # Icons
     candy-icons
+
+    # Cursor
     bibata-cursors
+
     nwg-look
   ];
 
@@ -50,8 +62,9 @@
     enable = true;
 
     defaultFonts = {
-      monospace = [ "JetBrainsMono Nerd Font" ];
-      sansSerif = [ "JetBrains Mono" ];
+      monospace = [ "JetBrainsMono Nerd Font Mono" ];
+      sansSerif = [ "JetBrainsMono Nerd Font" ];
+      serif = [ "Noto Serif" ];
     };
   };
 

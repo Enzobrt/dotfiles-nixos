@@ -53,6 +53,7 @@ in
     wine
     xclicker
     nautilus
+    font-manager
 
     ## Internet
     brave
@@ -90,6 +91,7 @@ in
     retroarch-full
     es-de
     rpcs3
+    ryubing
 
     ## Media
     mpv
