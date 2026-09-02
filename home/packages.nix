@@ -62,6 +62,12 @@ in
     baobab
     nautilus
     gnome-tweaks
+    gnome-control-center
+    gnome-music
+    gnome-characters
+    gnome-calculator
+    yelp
+    gnome-decoder
 
     ## Internet
     brave
