@@ -49,15 +49,19 @@ in
     ## System
     jetbrains-mono
     #vicinae
-    gnome-tweaks
     wine
     xclicker
-    nautilus
     font-manager
 
     ## Cosmic
     cosmic-monitor
     cosmic-launcher
+    examine
+
+    ## Gnome
+    baobab
+    nautilus
+    gnome-tweaks
 
     ## Internet
     brave
