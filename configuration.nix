@@ -169,6 +169,10 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = with pkgs; [
+      mesa.opencl
+      rocmPackages.clr.icd
+    ]; # habilita Rusticl (OpenCL)
   };
 
   # Scheduled optimise

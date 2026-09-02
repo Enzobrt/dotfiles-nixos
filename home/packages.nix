@@ -103,6 +103,9 @@ in
     #vlc
     jellyfin
 
+    kdePackages.kdenlive
+    davinci-resolve
+
     ## Terminal
     ghostty
     wofi #rofi is not supported in gnome
