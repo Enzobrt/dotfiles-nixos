@@ -87,6 +87,7 @@ in
     steam
     modrinth-app
     curseforge
+    r2modman
 
     retroarch-full
     es-de
