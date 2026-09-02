@@ -10,15 +10,23 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    vicinae.url = "github:vicinaehq/vicinae";
+
+    vicinae-extensions = {
+      url = "github:vicinaehq/extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }:
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, vicinae, vicinae-extensions, ... }:
   {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
       modules = [
         ./configuration.nix
+        vicinae.nixosModules.default
 
         home-manager.nixosModules.home-manager
         {
@@ -27,12 +35,14 @@
           home-manager.backupFileExtension = "backup";
 
           home-manager.extraSpecialArgs = {
+            inherit vicinae-extensions;
             colors = import ./home/colors.nix;
           };
 
           home-manager.users.enzo = { config, lib, pkgs, ... }: {
             imports = [
-                nix-flatpak.homeManagerModules.nix-flatpak
+              vicinae.homeManagerModules.default
+              nix-flatpak.homeManagerModules.nix-flatpak
               ./home/home.nix
             ];
           };

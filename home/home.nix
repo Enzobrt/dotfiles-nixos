@@ -22,6 +22,7 @@
     ./programs/bat.nix
     ./programs/fzf.nix
     ./programs/btop.nix
+    ./programs/vicinae.nix
     #./programs/vesktop.nix # No usar, hace que tengas que volver a configurar vesktop
   ];
 

@@ -55,6 +55,10 @@ in
     nautilus
     font-manager
 
+    ## Cosmic
+    cosmic-monitor
+    cosmic-launcher
+
     ## Internet
     brave
     syncthing
