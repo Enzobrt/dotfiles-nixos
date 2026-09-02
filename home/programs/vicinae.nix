@@ -13,7 +13,7 @@
     settings = {
       close_on_focus_loss = true;
       consider_preedit = true;
-      pop_to_root_on_close = true;
+      #pop_to_root_on_close = true;
       favicon_service = "twenty";
       search_files_in_root = true;
       font = {
@@ -28,7 +28,7 @@
           icon_theme = "default";
         };
         dark = {
-          name = "vicinae-dark";
+          name = "tokyo-night-storm";
           icon_theme = "default";
         };
       };
