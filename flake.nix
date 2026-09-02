@@ -8,9 +8,11 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }:
   {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -19,7 +21,6 @@
         ./configuration.nix
 
         home-manager.nixosModules.home-manager
-
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
@@ -31,6 +32,7 @@
 
           home-manager.users.enzo = { config, lib, pkgs, ... }: {
             imports = [
+                nix-flatpak.homeManagerModules.nix-flatpak
               ./home/home.nix
             ];
           };

@@ -12,6 +12,7 @@
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  services.flatpak.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

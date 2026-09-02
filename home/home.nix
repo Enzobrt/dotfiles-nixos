@@ -6,6 +6,8 @@
     ./packages.nix
     ./theme.nix
 
+    ./flatpaks.nix
+
     ./programs/dconf.nix
     ./programs/services.nix
     ./programs/bash.nix
