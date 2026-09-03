@@ -65,6 +65,7 @@ in
     gnome-music
     gnome-characters
     gnome-calculator
+    eog
     yelp
 
     ## Internet
