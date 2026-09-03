@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   # ES-DE wrapper
@@ -42,7 +42,18 @@ let
     };
   };
 
-  # Cartridges: fix Gtk.Label receiving an int instead of a string
+  # Audacity 4
+  audacity-4 = pkgs.appimageTools.wrapType2 {
+    pname = "audacity-4";
+    version = "4.0.0";
+
+    src = pkgs.fetchurl {
+      url = "https://github.com/audacity/audacity/releases/download/Audacity-4.0.0/audacity-linux-4.0.0-x86_64.AppImage";
+      hash = "sha256-dyZjsLQHvkQjIZO4QCzeTaRmXH9uge21tw47FOi5tbQ=";
+    };
+  };
+
+  # Cartridges
   cartridges-fixed = pkgs.cartridges.overrideAttrs (oldAttrs: {
     postPatch = (oldAttrs.postPatch or "") + ''
       substituteInPlace cartridges/window.py \
@@ -84,7 +95,8 @@ in
 
     ## Office
     vim
-    audacity
+    #audacity
+    audacity-4
     libreoffice
     gimp
     obs-studio
@@ -174,8 +186,6 @@ in
     ## Gnome extensions
     gnomeExtensions.lan-ip-address
     gnomeExtensions.appindicator
-    gnomeExtensions.gsconnect
-    gnomeExtensions.fly-pie
 
     ## Programming
     go
@@ -222,5 +232,17 @@ in
     Type=Application
     Path=/home/enzo
     Categories=Game;
+  '';
+
+  home.file.".local/share/applications/audacity-4.desktop".text = ''
+    [Desktop Entry]
+    Name=Audacity 4
+    Comment=Audio editor
+    Exec=audacity-4
+    Icon=audio-x-generic
+    Terminal=false
+    Type=Application
+    Path=/home/enzo
+    Categories=Audio;AudioVideo;
   '';
 }

@@ -209,7 +209,6 @@
     seahorse # Passwords app
     showtime # Video player
     loupe # Image viewer !eog
-    gnome-clocks
     gnome-system-monitor # !resources
     decibels # Audio player
   ];
@@ -220,6 +219,20 @@
     android-studio
     android-tools
   ];
+
+  systemd.services.lenovo-conservation-mode = {
+    description = "Enable Lenovo battery conservation mode";
+
+    wantedBy = [ "multi-user.target" ];
+    after = [ "sys-devices-platform-VPC2004:00.device" ];
+    wants = [ "sys-devices-platform-VPC2004:00.device" ];
+
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStart = "${pkgs.bash}/bin/bash -c 'echo 1 > /sys/bus/platform/devices/VPC2004:00/conservation_mode'";
+    };
+  };
 
   networking.firewall = {
     enable = true;
@@ -248,11 +261,6 @@
     allowedUDPPortRanges = [
       { from = 1714; to = 1764; }
     ];
-  };
-
-  programs.kdeconnect = {
-    enable = true;
-    package = pkgs.gnomeExtensions.gsconnect;
   };
 
   xdg.portal = {

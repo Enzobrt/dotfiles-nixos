@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   dconf = {
     enable = true;
@@ -10,11 +8,8 @@
       "org/gnome/shell" = {
         # disable-user-extensions = true; # Optionally disable user extensions entirely
         enabled-extensions = [
-          "flypie@schneegans.github.com"
           "appindicatorsupport@rgcjonas.gmail.com"
-          "gsconnect@andyholmes.github.io"
           "lan-ip-address@mrhuber.com"
-          "workspace-bar@jguece"
         ];
       };
 

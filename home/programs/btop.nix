@@ -1,5 +1,3 @@
-{ config, pkgs, colors, ... }:
-
 {
   programs.btop = {
     enable = true;

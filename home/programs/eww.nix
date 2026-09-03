@@ -1,4 +1,4 @@
-{ config, pkgs, colors, ... }:
+{ colors, ... }:
 
 let
   scssContent = builtins.readFile ./eww/eww.scss;

@@ -25,6 +25,7 @@
     ./programs/vicinae.nix
     #./programs/vesktop.nix # No usar, hace que tengas que volver a configurar vesktop
     ./programs/syncthing.nix
+    ./programs/kdeconnect.nix
   ];
 
   home.username = "enzo";

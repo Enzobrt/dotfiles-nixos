@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, vicinae-extensions, ... }:
+{ pkgs, vicinae-extensions, ... }:
 
 {
   programs.vicinae = {
@@ -37,9 +37,9 @@
       };
     };
     extensions = with vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
-       nix
-       power-profile
-      # Extension names can be found in the link below, it's just the folder names
+      nix
+      power-profile
+
     ];
   };
 }
