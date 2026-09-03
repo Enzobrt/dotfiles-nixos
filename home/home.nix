@@ -24,6 +24,7 @@
     ./programs/btop.nix
     ./programs/vicinae.nix
     #./programs/vesktop.nix # No usar, hace que tengas que volver a configurar vesktop
+    ./programs/syncthing.nix
   ];
 
   home.username = "enzo";
