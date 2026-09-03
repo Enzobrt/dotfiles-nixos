@@ -42,6 +42,14 @@ let
     };
   };
 
+  # Cartridges: fix Gtk.Label receiving an int instead of a string
+  cartridges-fixed = pkgs.cartridges.overrideAttrs (oldAttrs: {
+    postPatch = (oldAttrs.postPatch or "") + ''
+      substituteInPlace cartridges/window.py \
+        --replace-fail 'label=games_no,' 'label=str(games_no),'
+    '';
+  });
+
 in
 
 {
@@ -52,21 +60,20 @@ in
     xclicker
     font-manager
 
-    ## Cosmic
-    cosmic-monitor
-    cosmic-launcher
-    examine
-
     ## Gnome
     baobab
     nautilus
-    gnome-tweaks
-    gnome-control-center
-    gnome-music
-    gnome-characters
-    gnome-calculator
     eog
-    yelp
+    gnome-control-center
+    gnome-tweaks
+    resources
+
+    pika-backup
+    cartridges-fixed
+    gnome-music
+    gnome-calculator
+    switcheroo
+    #junction
 
     ## Internet
     brave
@@ -109,8 +116,8 @@ in
 
     ## Media
     mpv
-    #vlc
     jellyfin
+    #vlc
 
     kdePackages.kdenlive
     davinci-resolve
@@ -163,7 +170,13 @@ in
 
     #impala
     #iwd # Enable at your own risk
-    
+
+    ## Gnome extensions
+    gnomeExtensions.lan-ip-address
+    gnomeExtensions.appindicator
+    gnomeExtensions.gsconnect
+    gnomeExtensions.fly-pie
+
     ## Programming
     go
     (python313.withPackages (ps: with ps; [

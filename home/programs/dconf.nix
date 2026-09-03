@@ -4,13 +4,17 @@
   dconf = {
     enable = true;
     settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
       "org/gnome/shell" = {
         # disable-user-extensions = true; # Optionally disable user extensions entirely
         enabled-extensions = [
-	  #"appindicatorsupport@rgcjonas.gmail.com"
-	  "gsconnect@andyholmes.github.io"
-	  #"lan-ip-address@mrhuber.com"
-	  #"workspace-bar@jguece"
+          "flypie@schneegans.github.com"
+          "appindicatorsupport@rgcjonas.gmail.com"
+          "gsconnect@andyholmes.github.io"
+          "lan-ip-address@mrhuber.com"
+          "workspace-bar@jguece"
         ];
       };
 

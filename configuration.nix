@@ -209,11 +209,6 @@
     keyd
     android-studio
     android-tools
-
-    # Gnome extensions
-    gnomeExtensions.lan-ip-address
-    gnomeExtensions.appindicator
-    gnomeExtensions.gsconnect
   ];
 
   networking.firewall = {
