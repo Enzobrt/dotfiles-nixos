@@ -111,7 +111,7 @@
 
   # To disable installing GNOME's suite of applications
   # and only be left with GNOME shell.
-  services.gnome.core-apps.enable = false;
+  services.gnome.core-apps.enable = true;
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
 
@@ -193,15 +193,25 @@
 
   # Exclude system pkgs here ↓
   services.xserver.excludePackages = with pkgs; [
-    xterm
   ];
 
   # Exclude gnome environment pkgs here ↓
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
     gnome-user-docs
-
-    xterm
+    gnome-contacts
+    gnome-connections # Remote machine access
+    gnome-software
+    gnome-weather
+    epiphany
+    gnome-maps
+    papers # Document viewer
+    seahorse # Passwords app
+    showtime # Video player
+    loupe # Image viewer !eog
+    gnome-clocks
+    gnome-system-monitor # !resources
+    decibels # Audio player
   ];
   
   # Install gnome environment pkgs here ↓

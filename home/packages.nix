@@ -58,7 +58,6 @@ in
     #vicinae
     wine
     xclicker
-    font-manager
 
     ## Gnome
     baobab
@@ -67,9 +66,10 @@ in
     gnome-control-center
     gnome-tweaks
     resources
+    simple-scan
 
     pika-backup
-    cartridges-fixed
+    #cartridges-fixed
     gnome-music
     gnome-calculator
     switcheroo
