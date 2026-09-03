@@ -2,8 +2,9 @@
 
 {
   home.packages = with pkgs; [
-    # Fonts
-    nerd-fonts.jetbrains-mono
+    ## Fonts
+    #nerd-fonts.jetbrains-mono
+    jetbrains-mono
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji

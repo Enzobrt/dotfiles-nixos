@@ -47,7 +47,6 @@ in
 {
   home.packages = with pkgs; [
     ## System
-    jetbrains-mono
     #vicinae
     wine
     xclicker
@@ -67,7 +66,6 @@ in
     gnome-characters
     gnome-calculator
     yelp
-    gnome-decoder
 
     ## Internet
     brave
@@ -86,11 +84,11 @@ in
     blender
     obsidian
     keepassxc
-    arduino
+    #arduino
 
     ## Game making
     godot
-    unityhub
+    #unityhub
 
     ## Games
     gamemode
@@ -124,11 +122,11 @@ in
     yazi
     fzf
     tree
+    bat
 
     fastfetch
     lm_sensors
     btop
-    tldr
 
     ncmpcpp
     mpc
@@ -138,9 +136,7 @@ in
 
     ydotool
 
-    alejandra
-
-    hyprpicker
+    tldr
 
     wget
     curl
@@ -153,8 +149,7 @@ in
     ninja
     nodejs
     openjdk
-    bat
-    plocate
+    #plocate
     arandr
     tree-sitter
     eww
