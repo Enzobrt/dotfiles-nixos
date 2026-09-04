@@ -80,7 +80,7 @@ in
     simple-scan
 
     pika-backup
-    #cartridges-fixed
+    cartridges-fixed
     gnome-music
     gnome-calculator
     switcheroo

@@ -11,7 +11,6 @@
     liberation_ttf
     dejavu_fonts
 
-
     # Icons
     candy-icons
 
@@ -23,10 +22,13 @@
   
   # wallpaper
   dconf.settings."org/gnome/desktop/background" = {
-    picture-uri = "file:///home/enzo/Pictures/wallpaper/Nixos/nixos_pride_pastel.png";
-    picture-uri-dark = "file:///home/enzo/Pictures/wallpaper/Nixos/nixos_pride_pastel.png";
+    picture-uri = "file:///etc/nixos/home/assets/wallpaper.png";
+    picture-uri-dark = "file:///etc/nixos/home/assets/wallpaper.png";
     picture-options = "zoom";
   };
+
+  # Profile picture
+  home.file.".face".source = ./assets/profile.png;
 
   gtk = {
     enable = true;
