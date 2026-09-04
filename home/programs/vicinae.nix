@@ -1,27 +1,30 @@
-{ pkgs, vicinae-extensions, ... }:
+{ pkgs, vicinae, vicinae-extensions, ... }:
 
 {
   programs.vicinae = {
-    enable = true; # default: false
+    enable = true;
+
+    package = vicinae.packages.${pkgs.stdenv.hostPlatform.system}.default;
+
     systemd = {
-      enable = true; # default: false
-      autoStart = true; # default: true (if systemd.enable is true)
+      enable = true;
+      autoStart = true;
       environment = {
         USE_LAYER_SHELL = 1;
       };
     };
+
     settings = {
       close_on_focus_loss = true;
       consider_preedit = true;
-      #pop_to_root_on_close = true;
       favicon_service = "twenty";
       search_files_in_root = true;
-      font = {
-        normal = {
-          size = 12;
-          family = "JetBrains Mono";
-        };
+
+      font.normal = {
+        size = 12;
+        family = "JetBrains Mono";
       };
+
       theme = {
         light = {
           name = "vicinae-light";
@@ -32,14 +35,16 @@
           icon_theme = "default";
         };
       };
-      launcher_window = {
-        opacity = 0.98;
-      };
-    };
-    extensions = with vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
-      nix
-      power-profile
 
-    ];
+      launcher_window.opacity = 0.98;
+    };
+
+    extensions =
+      with vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system};
+      [
+        nix
+        power-profile
+        it-tools
+      ];
   };
 }

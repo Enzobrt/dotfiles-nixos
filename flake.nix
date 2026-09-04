@@ -35,7 +35,7 @@
           home-manager.backupFileExtension = "backup";
 
           home-manager.extraSpecialArgs = {
-            inherit vicinae-extensions;
+            inherit vicinae vicinae-extensions;
             colors = import ./home/colors.nix;
           };
 

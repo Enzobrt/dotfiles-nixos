@@ -155,9 +155,8 @@ in
     wiremix
 
     wifitui
-    
+
     typer
-    taskbook
 
     ydotool
 
