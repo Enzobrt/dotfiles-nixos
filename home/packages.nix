@@ -131,6 +131,8 @@ in
     jellyfin
     #vlc
 
+    hakuneko # Descargar animes y mangas
+
     kdePackages.kdenlive
     davinci-resolve
 
