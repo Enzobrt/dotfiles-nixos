@@ -1,9 +1,8 @@
+{ pkgs, ... }:
+
 {
   programs.bat = {
     enable = true;
-    config = {
-      theme = "TokyoNight";
-      pager = "less -FR";
-    };
+    config.theme = "tokyo-night";
   };
 }

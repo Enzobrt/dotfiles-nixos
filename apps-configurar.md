@@ -1,0 +1,14 @@
+- yazi
+- tree?
+- bat
+- fastfetch
+- lm sensors?
+- ncmpcpp
+- mpc
+- mpd
+- mpd-mpris
+- wiremix
+- ssh.nix
+- eww
+- kando
+- quickshell

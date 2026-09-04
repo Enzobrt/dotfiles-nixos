@@ -5,7 +5,6 @@
     enable = true;
 
     enableBashIntegration = true;
-    enableZshIntegration = true;
 
     colors = {
       fg = colors.fg;

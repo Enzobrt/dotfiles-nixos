@@ -154,6 +154,11 @@ in
     mpd-mpris
     wiremix
 
+    wifitui
+    
+    typer
+    taskbook
+
     ydotool
 
     tldr
@@ -179,9 +184,6 @@ in
     ripgrep
 
     zenity
-
-    #impala
-    #iwd # Enable at your own risk
 
     ## Gnome extensions
     gnomeExtensions.lan-ip-address
