@@ -33,11 +33,17 @@
   gtk = {
     enable = true;
 
-    colorScheme = "dark";
-
+    # GTK3
     theme = {
       name = "Tokyonight-Dark-BL";
       package = pkgs.tokyonight-gtk-theme;
+    };
+
+    # GTK4/libadwaita: usa el esquema oscuro de GNOME
+    gtk4 = {
+      enable = true;
+
+      colorScheme = "dark";
     };
 
     iconTheme = {
@@ -97,10 +103,5 @@
     TOKYO_NIGHT_RED = colors.red;
 
     TOKYO_NIGHT_COMMENT = colors.comment;
-
-    GTK_THEME = "Tokyonight-Dark-BL";
-    XCURSOR_THEME = "Bibata-Modern-Classic";
-    XCURSOR_SIZE = "22";
-    QT_QPA_PLATFORMTHEME = "gtk3";
   };
 }
