@@ -11,6 +11,8 @@
 
     ./flatpaks.nix
 
+    ./programs/web-apps.nix
+
     ./programs/dconf.nix
     ./programs/services.nix
     ./programs/bash.nix

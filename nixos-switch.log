@@ -8,4 +8,4 @@ reloading user units for enzo...
 restarting the following user units: nixos-activation.service
 restarting sysinit-reactivation.target
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/hbk4bkmb2bk1qakcd9fy4s1nwf7796wp-nixos-system-nixos-26.05.20260827.d57af92
+Done. The new configuration is /nix/store/4rr92ps9krw5rlhjlwcgav5dm9xdvkg6-nixos-system-nixos-26.05.20260827.d57af92
