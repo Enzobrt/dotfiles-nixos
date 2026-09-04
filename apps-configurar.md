@@ -8,7 +8,6 @@
 - mpd
 - mpd-mpris
 - wiremix
-- ssh.nix
 - eww
 - kando
 - quickshell

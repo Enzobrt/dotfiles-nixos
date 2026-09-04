@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-let
+{pkgs, ...}: let
   # ES-DE wrapper
   es-de = pkgs.appimageTools.wrapType2 {
     pname = "emulationstation-de";
@@ -33,9 +31,10 @@ let
       hash = "sha256-vwsghjm2r8FhKjSyxBg//AN12O7qwLZ5uNu/ndl0WCo=";
     };
 
-    extraPkgs = pkgs: with pkgs; [
-      zenity
-    ];
+    extraPkgs = pkgs:
+      with pkgs; [
+        zenity
+      ];
 
     extraEnv = {
       TWBM_DISABLE_UPDATES = "1";
@@ -55,15 +54,14 @@ let
 
   # Cartridges
   cartridges-fixed = pkgs.cartridges.overrideAttrs (oldAttrs: {
-    postPatch = (oldAttrs.postPatch or "") + ''
-      substituteInPlace cartridges/window.py \
-        --replace-fail 'label=games_no,' 'label=str(games_no),'
-    '';
+    postPatch =
+      (oldAttrs.postPatch or "")
+      + ''
+        substituteInPlace cartridges/window.py \
+          --replace-fail 'label=games_no,' 'label=str(games_no),'
+      '';
   });
-
-in
-
-{
+in {
   home.packages = with pkgs; [
     ## System
     #vicinae
@@ -150,6 +148,10 @@ in
     lm_sensors
     btop
 
+    tldr
+
+    libnotify
+
     ncmpcpp
     mpc
     mpd
@@ -162,7 +164,7 @@ in
 
     ydotool
 
-    tldr
+    alejandra
 
     wget
     curl
@@ -183,7 +185,6 @@ in
     gcc
     fd
     ripgrep
-
     zenity
 
     ## Gnome extensions
@@ -192,16 +193,17 @@ in
 
     ## Programming
     go
-    (python313.withPackages (ps: with ps; [
-      pandas
-      pygame
-      matplotlib
-      mplcursors
-      numpy
-      keyboard
-    ]))
+    (python313.withPackages (ps:
+      with ps; [
+        pandas
+        pygame
+        matplotlib
+        mplcursors
+        numpy
+        keyboard
+      ]))
   ];
-  
+
   home.file.".local/share/applications/es-de.desktop".text = ''
     [Desktop Entry]
     Name=ES-DE

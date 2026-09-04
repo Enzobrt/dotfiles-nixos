@@ -19,8 +19,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, vicinae, vicinae-extensions, ... }:
-  {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nix-flatpak,
+    vicinae,
+    vicinae-extensions,
+    ...
+  }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
@@ -50,7 +57,12 @@
             colors = import ./home/colors.nix;
           };
 
-          home-manager.users.enzo = { config, lib, pkgs, ... }: {
+          home-manager.users.enzo = {
+            config,
+            lib,
+            pkgs,
+            ...
+          }: {
             imports = [
               vicinae.homeManagerModules.default
               nix-flatpak.homeManagerModules.nix-flatpak

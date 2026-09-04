@@ -25,7 +25,7 @@
       cursor-style = "block";
       cursor-color = "9ece6a";
 
-      confirm-close-surface=false;
+      confirm-close-surface = false;
 
       keybind = [
         "ctrl+f=start_search"

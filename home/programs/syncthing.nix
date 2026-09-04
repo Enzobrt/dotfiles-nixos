@@ -19,19 +19,19 @@
       folders = {
         keepassxce = {
           path = "~/Documents/keepass/";
-          devices = [ "movil-z" ];
+          devices = ["movil-z"];
         };
         notas-obsidian = {
           path = "~/Documents/notas-obsidian";
-          devices = [ "movil-z" ];
+          devices = ["movil-z"];
         };
         music = {
           path = "~/Music";
-          devices = [ "movil-z" ];
+          devices = ["movil-z"];
         };
         roms = {
           path = "~/Documents/Games/roms";
-          devices = [ "movil-z" ];
+          devices = ["movil-z"];
           ignorePatterns = [
             "ds"
             "gc"

@@ -1,6 +1,9 @@
-{ config, pkgs, colors, ... }:
-
 {
+  config,
+  pkgs,
+  colors,
+  ...
+}: {
   home.packages = with pkgs; [
     ## Fonts
     #nerd-fonts.jetbrains-mono
@@ -19,7 +22,7 @@
 
     nwg-look
   ];
-  
+
   # wallpaper
   dconf.settings."org/gnome/desktop/background" = {
     picture-uri = "file:///etc/nixos/home/assets/wallpaper.png";
@@ -78,9 +81,9 @@
     enable = true;
 
     defaultFonts = {
-      monospace = [ "JetBrainsMono Nerd Font Mono" ];
-      sansSerif = [ "JetBrainsMono Nerd Font" ];
-      serif = [ "Noto Serif" ];
+      monospace = ["JetBrainsMono Nerd Font Mono"];
+      sansSerif = ["JetBrainsMono Nerd Font"];
+      serif = ["Noto Serif"];
     };
   };
 

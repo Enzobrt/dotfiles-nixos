@@ -1,14 +1,12 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   systemd.user.services.minecraft-toggl-tracker = {
     Unit = {
       Description = "Minecraft Toggl Tracker";
-      After = [ "network.target" ];
+      After = ["network.target"];
     };
 
     Install = {
-      WantedBy = [ "default.target" ];
+      WantedBy = ["default.target"];
     };
 
     Service = {
@@ -21,7 +19,7 @@
   systemd.user.services.ydotoold = {
     Unit = {
       Description = "ydotool daemon";
-      After = [ "graphical-session.target" ];
+      After = ["graphical-session.target"];
     };
 
     Service = {
@@ -30,7 +28,7 @@
     };
 
     Install = {
-      WantedBy = [ "default.target" ];
+      WantedBy = ["default.target"];
     };
   };
 }

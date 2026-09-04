@@ -1,7 +1,7 @@
 {
   programs.starship = {
     enable = true;
-    presets = [ "nerd-font-symbols" ];
+    presets = ["nerd-font-symbols"];
     settings = {
       character = {
         success_symbol = "[➜](bold green)";

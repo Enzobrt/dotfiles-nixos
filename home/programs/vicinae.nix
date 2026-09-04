@@ -1,6 +1,9 @@
-{ pkgs, vicinae, vicinae-extensions, ... }:
-
 {
+  pkgs,
+  vicinae,
+  vicinae-extensions,
+  ...
+}: {
   programs.vicinae = {
     enable = true;
 
@@ -39,12 +42,10 @@
       launcher_window.opacity = 0.98;
     };
 
-    extensions =
-      with vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system};
-      [
-        nix
-        power-profile
-        it-tools
-      ];
+    extensions = with vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
+      nix
+      power-profile
+      it-tools
+    ];
   };
 }

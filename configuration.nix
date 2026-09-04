@@ -1,17 +1,18 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Import stuff from other places
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   services.flatpak.enable = true;
 
   # Bootloader.
@@ -25,7 +26,7 @@
       themePackages = with pkgs; [
         # By default we would install all themes
         (adi1090x-plymouth-themes.override {
-          selected_themes = [ "optimus" ];
+          selected_themes = ["optimus"];
         })
       ];
     };
@@ -77,7 +78,7 @@
   };
 
   networking.hostName = "nixos"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
 
   # Configure network proxy if necessary
@@ -152,9 +153,9 @@
   users.users."enzo" = {
     isNormalUser = true;
     description = "enzo";
-    extraGroups = [ "networkmanager" "wheel" "kvm" ];
+    extraGroups = ["networkmanager" "wheel" "kvm"];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -179,7 +180,7 @@
 
   # Scheduled optimise
   nix.optimise.automatic = true;
-  nix.optimise.dates = [ "Mon 04:00" "Fri 04:00" ]; # Optional; allows customizing optimisation schedule
+  nix.optimise.dates = ["Mon 04:00" "Fri 04:00"]; # Optional; allows customizing optimisation schedule
 
   # Free up to 1GiB whenever there is less than 100MiB left:
   nix.extraOptions = ''
@@ -225,9 +226,9 @@
   systemd.services.lenovo-conservation-mode = {
     description = "Enable Lenovo battery conservation mode";
 
-    wantedBy = [ "multi-user.target" ];
-    after = [ "sys-devices-platform-VPC2004:00.device" ];
-    wants = [ "sys-devices-platform-VPC2004:00.device" ];
+    wantedBy = ["multi-user.target"];
+    after = ["sys-devices-platform-VPC2004:00.device"];
+    wants = ["sys-devices-platform-VPC2004:00.device"];
 
     serviceConfig = {
       Type = "oneshot";
@@ -257,11 +258,17 @@
     ];
 
     allowedTCPPortRanges = [
-      { from = 1714; to = 1764; }
+      {
+        from = 1714;
+        to = 1764;
+      }
     ];
 
     allowedUDPPortRanges = [
-      { from = 1714; to = 1764; }
+      {
+        from = 1714;
+        to = 1764;
+      }
     ];
   };
 
@@ -275,7 +282,7 @@
     keyboards = {
       default = {
         # the id of your keyboard taken from the monitor command - specifying it here and not using a wildcard * might avoid the aforementioned libinput issue with palm rejection.
-        ids = [ "0001:0001:09b4e68d" ];
+        ids = ["0001:0001:09b4e68d"];
         settings = {
           main = {
             # taking the key combination from the monitor command and remapping it to meta / super key
@@ -285,12 +292,12 @@
       };
     };
   };
-  
+
   programs.java.enable = true;
 
   programs.steam = {
     enable = true;
-    remotePlay.openFirewall = true;  # Open ports in the firewall for Steam Remote Play
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports for Source Dedicated Server hosting
   };
 
@@ -325,5 +332,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
-
 }

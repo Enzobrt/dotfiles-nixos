@@ -1,11 +1,7 @@
-{ colors, ... }:
-
-let
+{colors, ...}: let
   scssContent = builtins.readFile ./eww/eww.scss;
   yuckContent = builtins.readFile ./eww/eww.yuck;
-in
-
-{
+in {
   programs.eww = {
     enable = true;
     yuckConfig = yuckContent;

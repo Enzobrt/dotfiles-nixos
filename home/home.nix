@@ -1,6 +1,9 @@
-{ config, pkgs, colors, ... }:
-
 {
+  config,
+  pkgs,
+  colors,
+  ...
+}: {
   imports = [
     # Import things here
     ./packages.nix
