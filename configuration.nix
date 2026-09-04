@@ -214,7 +214,7 @@
     gnome-system-monitor # !resources
     decibels # Audio player
   ];
-  
+
   # Install gnome environment pkgs here ↓
   environment.systemPackages = with pkgs; [
     keyd

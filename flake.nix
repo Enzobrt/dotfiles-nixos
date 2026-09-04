@@ -24,11 +24,22 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
+      specialArgs = {
+        inherit home-manager;
+      };
+
       modules = [
         ./configuration.nix
+        {
+          environment.systemPackages = [
+            home-manager.packages.x86_64-linux.default
+          ];
+        }
+
         vicinae.nixosModules.default
 
         home-manager.nixosModules.home-manager
+
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
