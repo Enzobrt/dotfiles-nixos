@@ -150,6 +150,8 @@ in {
 
     tldr
 
+    dconf2nix
+
     ffmpeg
     ncmpcpp
     mpc
