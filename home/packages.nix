@@ -190,12 +190,6 @@ in {
     zenity
     libnotify
 
-    ## Gnome extensions
-    gnomeExtensions.lan-ip-address
-    gnomeExtensions.appindicator
-    gnomeExtensions.gsconnect
-    gnomeExtensions.caffeine
-
     ## Programming
     go
     (python313.withPackages (ps:

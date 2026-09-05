@@ -7,11 +7,12 @@
   imports = [
     # Import things here
     ./packages.nix
-    ./theme.nix
-
     ./flatpaks.nix
+    ./programs/gnome-extensions.nix
 
     ./programs/web-apps.nix
+
+    ./theme.nix
 
     ./programs/dconf.nix
     ./programs/services.nix
