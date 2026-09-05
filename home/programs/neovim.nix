@@ -10,6 +10,8 @@
     viAlias = true;
     extraPackages = with pkgs; [
       nil
+      alejandra
+      statix
     ];
     plugins = with pkgs.vimPlugins; [
       nvim-web-devicons

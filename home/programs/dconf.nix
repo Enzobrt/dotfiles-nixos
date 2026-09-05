@@ -6,7 +6,7 @@
         color-scheme = "prefer-dark";
       };
       "org/gnome/shell" = {
-        # disable-user-extensions = true; # Optionally disable user extensions entirely
+        disable-user-extensions = false;
         enabled-extensions = [
           "appindicatorsupport@rgcjonas.gmail.com"
           "lan-ip-address@mrhuber.com"

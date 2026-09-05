@@ -159,8 +159,6 @@
     ];
   };
 
-  nixpkgs.config.android_sdk.accept_license = true;
-
   # Scheduled garbage collecting
   nix.gc = {
     automatic = true;
@@ -219,8 +217,6 @@
   # Install gnome environment pkgs here ↓
   environment.systemPackages = with pkgs; [
     keyd
-    android-studio
-    android-tools
   ];
 
   systemd.services.lenovo-conservation-mode = {

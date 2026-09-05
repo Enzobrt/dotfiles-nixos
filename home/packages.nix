@@ -64,7 +64,7 @@
 in {
   home.packages = with pkgs; [
     ## System
-    #vicinae
+    #vicinae # Desactivado xq se configurar en viciane.nix
     wine
     xclicker
 
@@ -129,7 +129,7 @@ in {
     jellyfin
     #vlc
 
-    hakuneko # Descargar animes y mangas
+    ani-cli # Descargar animes y mangas
 
     kdePackages.kdenlive
     davinci-resolve
@@ -150,13 +150,13 @@ in {
 
     tldr
 
-    libnotify
-
+    ffmpeg
     ncmpcpp
     mpc
     mpd
     mpd-mpris
     wiremix
+    yt-dlp
 
     wifitui
 
@@ -186,10 +186,13 @@ in {
     fd
     ripgrep
     zenity
+    libnotify
 
     ## Gnome extensions
     gnomeExtensions.lan-ip-address
     gnomeExtensions.appindicator
+    gnomeExtensions.gsconnect
+    gnomeExtensions.caffeine
 
     ## Programming
     go
