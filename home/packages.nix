@@ -161,6 +161,7 @@ in {
     dmenu
     wofi
     rofi
+    fuzzel
 
     lf
     yazi
