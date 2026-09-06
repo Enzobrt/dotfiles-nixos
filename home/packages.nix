@@ -154,10 +154,11 @@ in {
     davinci-resolve
 
     ## Automation
-    actiona
+    crossmacro
 
     ## Terminal
     ghostty
+    dmenu
     wofi
     rofi
 
@@ -182,6 +183,7 @@ in {
     mpd-mpris
     wiremix
     yt-dlp
+    patch
 
     wifitui
 
