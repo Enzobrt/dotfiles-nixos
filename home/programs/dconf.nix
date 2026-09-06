@@ -1,3 +1,4 @@
+# a
 # Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
 {lib, ...}:
 with lib.hm.gvariant; {
@@ -19,16 +20,16 @@ with lib.hm.gvariant; {
 
     "com/github/FontManager/FontManager" = {
       browse-mode = "list";
-      browse-pane-position = 54.94736842105263;
+      browse-pane-position = 54.947368;
       browse-preview-visible = true;
-      content-size = 39.81623277182236;
-      hor-content-size = 35.987748851454825;
+      content-size = 39.816233;
+      hor-content-size = 35.987749;
       is-maximized = false;
       mode = "browse";
       prefer-dark-theme = true;
       preview-background-color = "rgb(0,0,0)";
       preview-foreground-color = "rgb(255,255,255)";
-      sidebar-size = 32.94736842105263;
+      sidebar-size = 32.947368;
       window-size = mkTuple [950 700];
     };
 
@@ -141,8 +142,8 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/control-center" = {
-      last-panel = "system";
-      window-state = mkTuple [980 640 true];
+      last-panel = "multitasking";
+      window-state = mkTuple [1061 640 false];
     };
 
     "org/gnome/desktop/a11y/applications" = {
@@ -224,14 +225,6 @@ with lib.hm.gvariant; {
       name = "Programming";
     };
 
-    "org/gnome/desktop/background" = {
-      picture-options = "zoom";
-      picture-uri = "file:///etc/nixos/home/assets/wallpaper.png";
-      picture-uri-dark = "file:///etc/nixos/home/assets/wallpaper.png";
-      primary-color = "#3a4ba0";
-      secondary-color = "#2f302f";
-    };
-
     "org/gnome/desktop/break-reminders/eyesight" = {
       play-sound = true;
     };
@@ -257,7 +250,7 @@ with lib.hm.gvariant; {
       clock-format = "24h";
       clock-show-seconds = false;
       clock-show-weekday = false;
-      color-scheme = "default";
+      color-scheme = "prefer-dark";
       cursor-size = 22;
       cursor-theme = "Bibata-Modern-Classic";
       document-font-name = "JetBrains Mono 12";
@@ -408,6 +401,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/desktop/wm/keybindings" = {
       begin-move = [];
+      begin-resize = ["<Super>r"];
       close = ["<Super>q"];
       maximize = [];
       switch-applications = ["<Alt>Tab"];
@@ -417,13 +411,16 @@ with lib.hm.gvariant; {
       switch-to-workspace-3 = ["<Super>3"];
       switch-to-workspace-4 = ["<Super>4"];
       switch-to-workspace-last = [];
+      switch-windows = ["<Super>Tab"];
+      switch-windows-backward = ["<Shift><Super>Tab"];
       toggle-fullscreen = ["F11"];
       toggle-maximized = ["<Super>m"];
-      unmaximize = [];
+      unmaximize = ["<Shift><Super>r"];
     };
 
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:close";
+      num-workspaces = 20;
     };
 
     "org/gnome/eog/ui" = {
@@ -457,11 +454,15 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/maps" = {
-      last-viewed-location = [40.317278024363915 (-3.754970732049486)];
+      last-viewed-location = [40.317278 (-3.754971)];
       map-type = "MapsVectorSource";
       transportation-type = "pedestrian";
       window-maximized = true;
       zoom-level = 16;
+    };
+
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
     };
 
     "org/gnome/nautilus/icon-view" = {
@@ -476,7 +477,7 @@ with lib.hm.gvariant; {
     "org/gnome/nautilus/window-state" = {
       initial-size = mkTuple [890 550];
       initial-size-file-chooser = mkTuple [890 550];
-      maximized = true;
+      maximized = false;
     };
 
     "org/gnome/nm-applet/eap/5b56895b-1b7d-4eaa-b503-0ec9df27c1dd" = {
@@ -624,8 +625,8 @@ with lib.hm.gvariant; {
     "org/gnome/shell" = {
       command-history = ["autoclicker-toggle" "impala" "ghostty -e wiremix"];
       disable-user-extensions = false;
-      disabled-extensions = ["workspace-bar@jguece"];
-      enabled-extensions = ["appindicatorsupport@rgcjonas.gmail.com" "lan-ip-address@mrhuber.com" "gsconnect@andyholmes.github.io" "caffeine@patapon.info" "media-keys@mafflin" "system-monitor-panel@naimur" "ResourceBuzzLite@hridoybuzz.dev" "Resource_Monitor@Ory0n" "emailmonitor@j-rambo.github.io" "syncthing@gnome.2nv2u.com" "top-bar-organizer@julian.gse.jsts.xyz" "openbar@neuromorph"];
+      disabled-extensions = ["workspace-bar@jguece" "lan-ip-address@mrhuber.com"];
+      enabled-extensions = ["appindicatorsupport@rgcjonas.gmail.com" "gsconnect@andyholmes.github.io" "caffeine@patapon.info" "media-keys@mafflin" "system-monitor-panel@naimur" "ResourceBuzzLite@hridoybuzz.dev" "emailmonitor@j-rambo.github.io" "syncthing@gnome.2nv2u.com" "top-bar-organizer@julian.gse.jsts.xyz" "openbar@neuromorph" "appindicatorsupport@rgcjonas.gmail.com" "gsconnect@andyholmes.github.io" "syncthing@gnome.2nv2u.com" "caffeine@patapon.info" "top-bar-organizer@julian.gse.jsts.xyz" "Resource_Monitor@Ory0n"];
       favorite-apps = [];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "50.4";
@@ -637,7 +638,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/shell/extensions/caffeine" = {
       cli-toggle = false;
-      indicator-position-max = 4;
+      indicator-position-max = 3;
     };
 
     "org/gnome/shell/extensions/flypie" = {
@@ -645,44 +646,51 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/shell/extensions/gsconnect" = {
-      devices = ["c0b0c51d30f941608c3aa195c5e43211" "7a5b479c4c3f4082acc761ca3546fd53"];
+      devices = ["7a5b479c4c3f4082acc761ca3546fd53" "c0b0c51d30f941608c3aa195c5e43211" "6212c78c4de34ae7b1258632c46093f9"];
       discoverable = true;
       missing-openssl = false;
       name = "nixos";
     };
 
+    "org/gnome/shell/extensions/gsconnect/device/6212c78c4de34ae7b1258632c46093f9" = {
+      incoming-capabilities = ["kdeconnect.battery" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.runcommand.output" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.shareinputdevices.request" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.telephony.request_mute"];
+      last-connection = "lan://192.168.0.20:1716";
+      name = "realme GT Master Edition";
+      outgoing-capabilities = ["kdeconnect.battery" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.digitizer" "kdeconnect.digitizer.session" "kdeconnect.findmyphone.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.shareinputdevices" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume.request" "kdeconnect.telephony"];
+      supported-plugins = ["battery" "clipboard" "connectivity_report" "contacts" "findmyphone" "mousepad" "mpris" "notification" "ping" "presenter" "runcommand" "sftp" "share" "sms" "systemvolume" "telephony"];
+      type = "phone";
+    };
+
     "org/gnome/shell/extensions/gsconnect/device/7a5b479c4c3f4082acc761ca3546fd53" = {
       incoming-capabilities = ["kdeconnect.battery" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.clipboard.file" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.digitizer" "kdeconnect.digitizer.session" "kdeconnect.findmyphone.request" "kdeconnect.lock" "kdeconnect.lock.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.shareinputdevices" "kdeconnect.shareinputdevices.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume" "kdeconnect.systemvolume.request" "kdeconnect.telephony" "kdeconnect.telephony.request_mute" "kdeconnect.virtualmonitor" "kdeconnect.virtualmonitor.request"];
-      last-connection = "lan://192.168.0.13:1716";
+      last-connection = "lan://192.168.0.29:1716";
       name = "arch-yago";
       outgoing-capabilities = ["kdeconnect.battery" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.clipboard.file" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.lock" "kdeconnect.lock.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.shareinputdevices" "kdeconnect.shareinputdevices.request" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.systemvolume.request" "kdeconnect.telephony" "kdeconnect.telephony.request_mute" "kdeconnect.virtualmonitor" "kdeconnect.virtualmonitor.request"];
       supported-plugins = ["battery" "clipboard" "findmyphone" "mousepad" "mpris" "notification" "ping" "runcommand" "share" "systemvolume" "telephony"];
       type = "desktop";
     };
 
-    "org/gnome/shell/extensions/gsconnect/device/c0b0c51d30f941608c3aa195c5e43211" = {
-      certificate-pem = "-----BEGIN CERTIFICATE-----nMIIBnjCCAUSgAwIBAgIUZT9bTkhEnkXaOqvzrY3c7iv2myMwCgYIKoZIzj0EAwQwnTzEpMCcGA1UEAwwgYzBiMGM1MWQzMGY5NDE2MDhjM2FhMTk1YzVlNDMyMTExDDAKnBgNVBAoMA0tERTEUMBIGA1UECwwLS0RFIENvbm5lY3QwHhcNMjUwODE5MTgxNTMwnWhcNMzYwODE2MTgxNTMwWjBPMSkwJwYDVQQDDCBjMGIwYzUxZDMwZjk0MTYwOGMznYWExOTVjNWU0MzIxMTEMMAoGA1UECgwDS0RFMRQwEgYDVQQLDAtLREUgQ29ubmVjndDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABIdoeS4Dwe4hYYKKKUXopfzqOZJSnf6ClrrelNfv7YgaEMeyFXRFaXFWrEYJCRfdWyL+EQCizoitA7cofb0ZAMwswCgYInKoZIzj0EAwQDSAAwRQIgPGj1E8y8A24dKIB6+Sn/68D9MGTtt+UCtO4k1B98C78CnIQC9YL05ZbJOQcfyQfuK+R8WiRhnj4JQdr4VxnyLxHIMaA==n-----END CERTIFICATE-----n";
-      incoming-capabilities = ["kdeconnect.battery" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.clipboard.file" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.digitizer" "kdeconnect.digitizer.session" "kdeconnect.findmyphone.request" "kdeconnect.lock" "kdeconnect.lock.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.shareinputdevices" "kdeconnect.shareinputdevices.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume" "kdeconnect.systemvolume.request" "kdeconnect.telephony" "kdeconnect.telephony.request_mute" "kdeconnect.virtualmonitor" "kdeconnect.virtualmonitor.request"];
-      last-connection = "lan://192.168.0.16:1716";
-      name = "nixos";
-      outgoing-capabilities = ["kdeconnect.battery" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.clipboard.file" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.lock" "kdeconnect.lock.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.shareinputdevices" "kdeconnect.shareinputdevices.request" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.systemvolume.request" "kdeconnect.telephony" "kdeconnect.telephony.request_mute" "kdeconnect.virtualmonitor" "kdeconnect.virtualmonitor.request"];
-      paired = true;
-      supported-plugins = ["battery" "clipboard" "findmyphone" "mousepad" "mpris" "notification" "ping" "runcommand" "share" "systemvolume" "telephony"];
-      type = "desktop";
-    };
-
-    "org/gnome/shell/extensions/gsconnect/device/c0b0c51d30f941608c3aa195c5e43211/plugin/battery" = {
+    "org/gnome/shell/extensions/gsconnect/device/7a5b479c4c3f4082acc761ca3546fd53/plugin/battery" = {
       custom-battery-notification-value = mkUint32 80;
     };
 
-    "org/gnome/shell/extensions/gsconnect/device/c0b0c51d30f941608c3aa195c5e43211/plugin/notification" = {
+    "org/gnome/shell/extensions/gsconnect/device/7a5b479c4c3f4082acc761ca3546fd53/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Events and Tasks Reminders":{"iconName":"org.gnome.Evolution-alarm-notify","enabled":true},"Pika Backup":{"iconName":"org.gnome.World.PikaBackup","enabled":true},"Zenity":{"iconName":"application-x-executable","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Online Accounts":{"iconName":"org.gnome.goa-daemon-symbolic","enabled":true},"Ghostty":{"iconName":"com.mitchellh.ghostty","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color Management":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Pika Backup Monitor":{"iconName":"org.gnome.World.PikaBackup","enabled":true},"vesktop":{"iconName":"","enabled":true}}
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Events and Tasks Reminders":{"iconName":"org.gnome.Evolution-alarm-notify","enabled":true},"Pika Backup":{"iconName":"org.gnome.World.PikaBackup","enabled":true},"Zenity":{"iconName":"application-x-executable","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Online Accounts":{"iconName":"org.gnome.goa-daemon-symbolic","enabled":true},"Ghostty":{"iconName":"com.mitchellh.ghostty","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color Management":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Pika Backup Monitor":{"iconName":"org.gnome.World.PikaBackup","enabled":true}}
       '';
     };
 
-    "org/gnome/shell/extensions/gsconnect/device/c0b0c51d30f941608c3aa195c5e43211/plugin/share" = {
+    "org/gnome/shell/extensions/gsconnect/device/7a5b479c4c3f4082acc761ca3546fd53/plugin/share" = {
       receive-directory = "/home/enzo/Downloads";
+    };
+
+    "org/gnome/shell/extensions/gsconnect/device/c0b0c51d30f941608c3aa195c5e43211" = {
+      incoming-capabilities = ["kdeconnect.battery" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.clipboard.file" "kdeconnect.connectivity_report" "kdeconnect.contacts.response_uids_timestamps" "kdeconnect.contacts.response_vcards" "kdeconnect.digitizer" "kdeconnect.digitizer.session" "kdeconnect.findmyphone.request" "kdeconnect.lock" "kdeconnect.lock.request" "kdeconnect.mousepad.echo" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.presenter" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp" "kdeconnect.share.request" "kdeconnect.shareinputdevices" "kdeconnect.shareinputdevices.request" "kdeconnect.sms.attachment_file" "kdeconnect.sms.messages" "kdeconnect.systemvolume" "kdeconnect.systemvolume.request" "kdeconnect.telephony" "kdeconnect.telephony.request_mute" "kdeconnect.virtualmonitor" "kdeconnect.virtualmonitor.request"];
+      last-connection = "lan://192.168.0.16:1717";
+      name = "nixos";
+      outgoing-capabilities = ["kdeconnect.battery" "kdeconnect.clipboard" "kdeconnect.clipboard.connect" "kdeconnect.clipboard.file" "kdeconnect.contacts.request_all_uids_timestamps" "kdeconnect.contacts.request_vcards_by_uid" "kdeconnect.findmyphone.request" "kdeconnect.lock" "kdeconnect.lock.request" "kdeconnect.mousepad.keyboardstate" "kdeconnect.mousepad.request" "kdeconnect.mpris" "kdeconnect.mpris.request" "kdeconnect.notification" "kdeconnect.notification.action" "kdeconnect.notification.reply" "kdeconnect.notification.request" "kdeconnect.ping" "kdeconnect.runcommand" "kdeconnect.runcommand.request" "kdeconnect.sftp.request" "kdeconnect.share.request" "kdeconnect.share.request.update" "kdeconnect.shareinputdevices" "kdeconnect.shareinputdevices.request" "kdeconnect.sms.request" "kdeconnect.sms.request_attachment" "kdeconnect.sms.request_conversation" "kdeconnect.sms.request_conversations" "kdeconnect.systemvolume" "kdeconnect.systemvolume.request" "kdeconnect.telephony" "kdeconnect.telephony.request_mute" "kdeconnect.virtualmonitor" "kdeconnect.virtualmonitor.request"];
+      supported-plugins = ["battery" "clipboard" "findmyphone" "mousepad" "mpris" "notification" "ping" "runcommand" "share" "systemvolume" "telephony"];
+      type = "desktop";
     };
 
     "org/gnome/shell/extensions/gsconnect/preferences" = {
@@ -691,7 +699,293 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/shell/extensions/openbar" = {
+      accent-color = ["0.753" "0.380" "0.796"];
+      accent-override = true;
+      apply-accent-shell = false;
+      apply-all-shell = false;
+      apply-flatpak = false;
+      apply-gtk = false;
+      apply-menu-notif = true;
+      apply-menu-shell = false;
+      auto-bgalpha = true;
+      autofg-bar = true;
+      autofg-menu = true;
+      autohg-bar = true;
+      autohg-menu = true;
+      autotheme-dark = "Color";
+      autotheme-font = true;
+      autotheme-light = "Select Theme";
+      autotheme-refresh = true;
+      balpha = 0.39;
+      bartype = "Trilands";
+      bcolor = ["0.871" "0.616" "0.498"];
+      bg-change = false;
+      bgalpha = 0.0;
+      bgalpha-wmax = 1.0;
+      bgalpha2 = 0.9;
+      bgcolor = ["0.282" "0.306" "0.298"];
+      bgcolor-wmax = ["0.129" "0.122" "0.129"];
+      bgcolor2 = ["0.420" "0.608" "0.420"];
+      bgpalette = false;
+      bguri = "file:///home/enzo/.config/background";
+      border-wmax = false;
+      bordertype = "solid";
+      bottom-margin = 2.5;
+      boxalpha = 0.0;
+      boxcolor = ["0.282" "0.306" "0.298"];
+      bradius = 13.0;
+      buttonbg-wmax = true;
+      bwidth = 0.0;
+      candy1 = ["0" "0.61" "0.74"];
+      candy10 = ["0.09" "0.19" "0.72"];
+      candy11 = ["0.75" "0.49" "0.44"];
+      candy12 = ["1" "0.92" "0.12"];
+      candy13 = ["0.38" "0.63" "0.92"];
+      candy14 = ["0.37" "0.36" "0.39"];
+      candy15 = ["0.4000000059604645" "0.23000000417232513" "0.7200000286102295"];
+      candy16 = ["1" "0.3199999928474426" "0.3199999928474426"];
+      candy2 = ["1" "0.41" "0.41"];
+      candy3 = ["0.63" "0.16" "0.8"];
+      candy4 = ["0.94" "0.60" "0.23"];
+      candy5 = ["0.029999999329447746" "0.4099999964237213" "0.6200000047683716"];
+      candy6 = ["0.56" "0.18" "0.43"];
+      candy7 = ["0.95" "0.12" "0.67"];
+      candy8 = ["0.18000000715255737" "0.7599999904632568" "0.49000000953674316"];
+      candy9 = ["0.93" "0.20" "0.23"];
+      candyalpha = 1.0;
+      candybar = false;
+      card-hint = 10;
+      color-scheme = "prefer-dark";
+      corner-radius = true;
+      count1 = 428930;
+      count10 = 59;
+      count11 = 19;
+      count12 = 13;
+      count2 = 61087;
+      count3 = 31107;
+      count4 = 23587;
+      count5 = 15098;
+      count6 = 1014;
+      count7 = 400;
+      count8 = 368;
+      count9 = 318;
+      cust-margin-wmax = false;
+      dark-accent-color = ["0.753" "0.380" "0.796"];
+      dark-bcolor = ["0.871" "0.616" "0.498"];
+      dark-bgcolor = ["0.282" "0.306" "0.298"];
+      dark-bgcolor-wmax = ["0.129" "0.122" "0.129"];
+      dark-bgcolor2 = ["0.420" "0.608" "0.420"];
+      dark-bguri = "file:///home/enzo/.config/background";
+      dark-boxcolor = ["0.282" "0.306" "0.298"];
+      dark-candy1 = ["0" "0.61" "0.74"];
+      dark-candy10 = ["0.09" "0.19" "0.72"];
+      dark-candy11 = ["0.75" "0.49" "0.44"];
+      dark-candy12 = ["1" "0.92" "0.12"];
+      dark-candy13 = ["0.38" "0.63" "0.92"];
+      dark-candy14 = ["0.37" "0.36" "0.39"];
+      dark-candy15 = ["0.4000000059604645" "0.23000000417232513" "0.7200000286102295"];
+      dark-candy16 = ["1" "0.3199999928474426" "0.3199999928474426"];
+      dark-candy2 = ["1" "0.41" "0.41"];
+      dark-candy3 = ["0.63" "0.16" "0.8"];
+      dark-candy4 = ["0.94" "0.60" "0.23"];
+      dark-candy5 = ["0.029999999329447746" "0.4099999964237213" "0.6200000047683716"];
+      dark-candy6 = ["0.56" "0.18" "0.43"];
+      dark-candy7 = ["0.95" "0.12" "0.67"];
+      dark-candy8 = ["0.18000000715255737" "0.7599999904632568" "0.49000000953674316"];
+      dark-candy9 = ["0.93" "0.20" "0.23"];
+      dark-dbgcolor = ["0.000" "0.000" "0.000"];
+      dark-fgcolor = ["1.000" "1.000" "1.000"];
+      dark-hcolor = ["0.482" "0.733" "0.698"];
+      dark-hscd-color = ["0.753" "0.376" "0.792"];
+      dark-iscolor = ["0.282" "0.306" "0.298"];
+      dark-mbcolor = ["0.482" "0.733" "0.698"];
+      dark-mbgcolor = ["0.173" "0.235" "0.235"];
+      dark-mfgcolor = ["1" "1" "1"];
+      dark-mhcolor = ["0.482" "0.733" "0.698"];
+      dark-mscolor = ["0.753" "0.376" "0.792"];
+      dark-mshcolor = ["0.000" "0.000" "0.000"];
+      dark-palette1 = ["44" "60" "60"];
+      dark-palette10 = ["60" "84" "73"];
+      dark-palette11 = ["91" "124" "124"];
+      dark-palette12 = ["144" "130" "92"];
+      dark-palette2 = ["223" "157" "127"];
+      dark-palette3 = ["123" "187" "178"];
+      dark-palette4 = ["107" "155" "107"];
+      dark-palette5 = ["76" "91" "92"];
+      dark-palette6 = ["72" "78" "76"];
+      dark-palette7 = ["171" "97" "98"];
+      dark-palette8 = ["112" "82" "79"];
+      dark-palette9 = ["79" "111" "92"];
+      dark-shcolor = ["0.000" "0.000" "0.000"];
+      dark-smbgcolor = ["0.420" "0.608" "0.420"];
+      dark-vw-color = ["0.753" "0.376" "0.792"];
+      dark-winbcolor = ["0.753" "0.376" "0.792"];
+      dashdock-style = "Default";
+      dbgalpha = 0.41;
+      dbgcolor = ["0.000" "0.000" "0.000"];
+      dborder = true;
+      dbradius = 20.0;
       default-font = "Sans 12";
+      destruct-color = ["0.75" "0.11" "0.16"];
+      disize = 42.0;
+      dshadow = false;
+      fgalpha = 1.0;
+      fgcolor = ["1.000" "1.000" "1.000"];
+      fitts-widgets = true;
+      font = "JetBrains Mono 12";
+      gradient = true;
+      gradient-direction = "vertical";
+      gtk-popover = true;
+      gtk-shadow = "Default";
+      gtk-transparency = 1.0;
+      halpha = 0.4;
+      handle-border = 3.0;
+      hbar-gtk3only = false;
+      hcolor = ["0.482" "0.733" "0.698"];
+      headerbar-hint = 2;
+      heffect = true;
+      height = 40.0;
+      hpad = 0.5;
+      hscd-color = ["0.753" "0.376" "0.792"];
+      import-export = false;
+      isalpha = 0.95;
+      iscolor = ["0.282" "0.306" "0.298"];
+      light-accent-color = ["0" "0.75" "0.75"];
+      light-bcolor = ["0.824" "0.459" "0.447"];
+      light-bgcolor = ["0.169" "0.349" "0.435"];
+      light-bgcolor-wmax = ["0.918" "0.910" "0.918"];
+      light-bgcolor2 = ["0.929" "0.675" "0.424"];
+      light-bguri = "file:///home/enzo/.config/background";
+      light-boxcolor = ["0.169" "0.349" "0.435"];
+      light-candy1 = ["0" "0.61" "0.74"];
+      light-candy10 = ["0.09" "0.19" "0.72"];
+      light-candy11 = ["0.75" "0.49" "0.44"];
+      light-candy12 = ["1" "0.92" "0.12"];
+      light-candy13 = ["0.38" "0.63" "0.92"];
+      light-candy14 = ["0.37" "0.36" "0.39"];
+      light-candy15 = ["0.40" "0.23" "0.72"];
+      light-candy16 = ["1" "0.32" "0.32"];
+      light-candy2 = ["1" "0.41" "0.41"];
+      light-candy3 = ["0.63" "0.16" "0.8"];
+      light-candy4 = ["0.94" "0.60" "0.23"];
+      light-candy5 = ["0.03" "0.41" "0.62"];
+      light-candy6 = ["0.56" "0.18" "0.43"];
+      light-candy7 = ["0.95" "0.12" "0.67"];
+      light-candy8 = ["0.18" "0.76" "0.49"];
+      light-candy9 = ["0.93" "0.20" "0.23"];
+      light-dbgcolor = ["0.125" "0.125" "0.125"];
+      light-fgcolor = ["1.0" "1.0" "1.0"];
+      light-hcolor = ["0.149" "0.106" "0.106"];
+      light-hscd-color = ["0.753" "0.376" "0.792"];
+      light-iscolor = ["0.169" "0.349" "0.435"];
+      light-mbcolor = ["0.149" "0.106" "0.106"];
+      light-mbgcolor = ["0.420" "0.643" "0.765"];
+      light-mfgcolor = ["1.0" "1.0" "1.0"];
+      light-mhcolor = ["0.149" "0.106" "0.106"];
+      light-mscolor = ["0.753" "0.376" "0.792"];
+      light-mshcolor = ["0.000" "0.000" "0.000"];
+      light-palette1 = ["44" "60" "60"];
+      light-palette10 = ["60" "84" "73"];
+      light-palette11 = ["91" "124" "124"];
+      light-palette12 = ["144" "130" "92"];
+      light-palette2 = ["223" "157" "127"];
+      light-palette3 = ["123" "187" "178"];
+      light-palette4 = ["107" "155" "107"];
+      light-palette5 = ["76" "91" "92"];
+      light-palette6 = ["72" "78" "76"];
+      light-palette7 = ["171" "97" "98"];
+      light-palette8 = ["112" "82" "79"];
+      light-palette9 = ["79" "111" "92"];
+      light-shcolor = ["0.000" "0.000" "0.000"];
+      light-smbgcolor = ["0.929" "0.675" "0.424"];
+      light-vw-color = ["0.753" "0.376" "0.792"];
+      light-winbcolor = ["0.753" "0.376" "0.792"];
+      margin = 2.5;
+      margin-wmax = 0.0;
+      mbalpha = 1.0;
+      mbcolor = ["0.482" "0.733" "0.698"];
+      mbg-gradient = false;
+      mbgalpha = 0.9;
+      mbgcolor = ["0.173" "0.235" "0.235"];
+      menu-radius = 21.0;
+      menustyle = true;
+      mfgalpha = 1.0;
+      mfgcolor = ["1" "1" "1"];
+      mhalpha = 0.53;
+      mhcolor = ["0.482" "0.733" "0.698"];
+      monitor-height = 1080;
+      monitor-width = 1920;
+      monitors = "all";
+      msalpha = 0.85;
+      mscolor = ["0.753" "0.376" "0.792"];
+      mshalpha = 0.16;
+      mshcolor = ["0.000" "0.000" "0.000"];
+      neon = true;
+      neon-wmax = true;
+      notif-radius = 10.0;
+      palette1 = ["44" "60" "60"];
+      palette10 = ["60" "84" "73"];
+      palette11 = ["91" "124" "124"];
+      palette12 = ["144" "130" "92"];
+      palette2 = ["223" "157" "127"];
+      palette3 = ["123" "187" "178"];
+      palette4 = ["107" "155" "107"];
+      palette5 = ["76" "91" "92"];
+      palette6 = ["72" "78" "76"];
+      palette7 = ["171" "97" "98"];
+      palette8 = ["112" "82" "79"];
+      palette9 = ["79" "111" "92"];
+      pause-reload = false;
+      position = "Top";
+      prominent1 = ["100" "100" "100"];
+      prominent2 = ["100" "100" "100"];
+      prominent3 = ["100" "100" "100"];
+      prominent4 = ["100" "100" "100"];
+      prominent5 = ["100" "100" "100"];
+      prominent6 = ["100" "100" "100"];
+      qtoggle-radius = 50.0;
+      radius-bottomleft = true;
+      radius-bottomright = true;
+      radius-topleft = true;
+      radius-topright = true;
+      reloadstyle = false;
+      removestyle = false;
+      sbar-gradient = "none";
+      set-bottom-margin = false;
+      set-fullscreen = false;
+      set-notif-position = false;
+      set-notifications = false;
+      set-overview = true;
+      set-yarutheme = false;
+      shadow = false;
+      shalpha = 0.3;
+      shcolor = ["0.000" "0.000" "0.000"];
+      sidebar-hint = 10;
+      sidebar-transparency = false;
+      slider-height = 4.0;
+      smbgalpha = 0.95;
+      smbgcolor = ["0.420" "0.608" "0.420"];
+      smbgoverride = true;
+      success-color = ["0.15" "0.635" "0.41"];
+      traffic-light = true;
+      trigger-autotheme = true;
+      trigger-reload = true;
+      use-system-accent = false;
+      view-hint = 2;
+      vpad = 2.9;
+      vw-color = ["0.753" "0.376" "0.792"];
+      warning-color = ["0.96" "0.83" "0.17"];
+      width-bottom = true;
+      width-left = true;
+      width-right = true;
+      width-top = true;
+      winbalpha = 1.0;
+      winbcolor = ["0.753" "0.376" "0.792"];
+      winbradius = 15.0;
+      winbwidth = 0.2;
+      window-hint = 2;
+      wmax-hbarhint = false;
+      wmaxbar = true;
     };
 
     "org/gnome/shell/extensions/resource-monitor" = {
@@ -706,19 +1000,19 @@ with lib.hm.gvariant; {
       diskdevicesdisplayall = true;
       diskdeviceslist = [
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1p2","stableId":"/dev/disk/by-uuid/bd0f3464-e7ce-4c0a-8564-de87eacd1702","mountPoint":"/","stats":false,"space":true,"displayName":"z"}
+          {"version":2,"type":"disk","device":"/dev/nvme0n1p2","stableId":"/dev/disk/by-uuid/bd0f3464-e7ce-4c0a-8564-de87eacd1702","mountPoint":"/","stats":false,"space":true,"displayName":"z"}\n
         ''
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1p2","stableId":"/dev/disk/by-uuid/bd0f3464-e7ce-4c0a-8564-de87eacd1702","mountPoint":"/nix/store","stats":false,"space":false,"displayName":"/dev/nvme0n1p2"}
+          {"version":2,"type":"disk","device":"/dev/nvme0n1p2","stableId":"/dev/disk/by-uuid/bd0f3464-e7ce-4c0a-8564-de87eacd1702","mountPoint":"/nix/store","stats":false,"space":false,"displayName":"/dev/nvme0n1p2"}\n
         ''
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1p1","stableId":"/dev/disk/by-uuid/4342-37A9","mountPoint":"/boot","stats":false,"space":false,"displayName":"/dev/nvme0n1p1"}
+          {"version":2,"type":"disk","device":"/dev/nvme0n1p1","stableId":"/dev/disk/by-uuid/4342-37A9","mountPoint":"/boot","stats":false,"space":false,"displayName":"/dev/nvme0n1p1"}\n
         ''
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1","stableId":"/dev/disk/by-id/nvme-Micron_MTFDKCD512QGN-1BN1AABLA_25465476450F","mountPoint":"","stats":false,"space":false,"displayName":"/dev/nvme0n1"}
+          {"version":2,"type":"disk","device":"/dev/nvme0n1","stableId":"/dev/disk/by-id/nvme-Micron_MTFDKCD512QGN-1BN1AABLA_25465476450F","mountPoint":"","stats":false,"space":false,"displayName":"/dev/nvme0n1"}\n
         ''
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1p3","stableId":"/dev/disk/by-uuid/cb242bc3-1021-4631-9a0f-315a50d4a1e1","mountPoint":"","stats":false,"space":false,"displayName":"/dev/nvme0n1p3"}
+          {"version":2,"type":"disk","device":"/dev/nvme0n1p3","stableId":"/dev/disk/by-uuid/cb242bc3-1021-4631-9a0f-315a50d4a1e1","mountPoint":"","stats":false,"space":false,"displayName":"/dev/nvme0n1p3"}\n
         ''
       ];
       diskshowdevicename = true;
@@ -733,7 +1027,7 @@ with lib.hm.gvariant; {
       gpucolors = ["65 0.9647058844566345 0.8274509906768799 0.1764705926179886" "80 1 0.47058823704719543 0" "92 0.8784313797950745 0.10588235408067703 0.1411764770746231"];
       gpudeviceslist = [
         ''
-          {"version":2,"type":"gpu","device":"amd:card2","name":"AMD GPU 0x1681","usage":true,"memory":false,"displayName":"GPU"}
+          {"version":2,"type":"gpu","device":"amd:card2","name":"AMD GPU 0x1681","usage":true,"memory":false,"displayName":"GPU"}\n
         ''
       ];
       gpumemorycolors = [];
@@ -763,7 +1057,7 @@ with lib.hm.gvariant; {
       thermalcpucolors = [];
       thermalcputemperaturedeviceslist = [
         ''
-          {"version":2,"type":"thermal-cpu","name":"k10temp: Tctl","monitor":true,"path":"/sys/class/hwmon/hwmon3/temp1_input"}
+          {"version":2,"type":"thermal-cpu","name":"k10temp: Tctl","monitor":true,"path":"/sys/class/hwmon/hwmon3/temp1_input"}\n
         ''
       ];
       thermalcputemperaturestatus = true;
@@ -771,7 +1065,7 @@ with lib.hm.gvariant; {
       thermalgpucolors = [];
       thermalgputemperaturedeviceslist = [
         ''
-          {"version":2,"type":"thermal-gpu","device":"amd:card2","name":"AMD GPU 0x1681","monitor":true}
+          {"version":2,"type":"thermal-gpu","device":"amd:card2","name":"AMD GPU 0x1681","monitor":true}\n
         ''
       ];
       thermalgputemperaturestatus = true;
@@ -781,7 +1075,7 @@ with lib.hm.gvariant; {
       center-box-order = ["dateMenu"];
       hide = [];
       left-box-order = ["activities"];
-      right-box-order = ["/org/gnome/Shell/Extensions/GSConnect/Device/6212c78c4de34ae7b1258632c46093f9" "/org/gnome/Shell/Extensions/GSConnect/Device/7a5b479c4c3f4082acc761ca3546fd53" "/org/gnome/Shell/Extensions/GSConnect/Device/c0b0c51d30f941608c3aa195c5e43211" "Resource_Monitor@Ory0n-primary-0" "lan-ip-address-indicator" "screenRecording" "screenSharing" "dwellClick" "a11y" "keyboard" "quickSettings"];
+      right-box-order = ["/org/gnome/Shell/Extensions/GSConnect/Device/4d77caa10877445aa8c2b2aee0656085" "appindicator-kstatusnotifieritem-vicinae" "appindicator-kstatusnotifieritem-vesktop_status_icon_1" "appindicator-kstatusnotifieritem-Syncthing Tray" "appindicator-kstatusnotifieritem-KDE Connect Indicator" "/org/gnome/Shell/Extensions/GSConnect/Device/6212c78c4de34ae7b1258632c46093f9" "/org/gnome/Shell/Extensions/GSConnect/Device/7a5b479c4c3f4082acc761ca3546fd53" "/org/gnome/Shell/Extensions/GSConnect/Device/c0b0c51d30f941608c3aa195c5e43211" "Resource_Monitor@Ory0n-primary-0" "lan-ip-address-indicator" "screenRecording" "screenSharing" "dwellClick" "a11y" "keyboard" "quickSettings"];
       show = [];
     };
 
@@ -811,11 +1105,12 @@ with lib.hm.gvariant; {
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      selected-color = mkTuple [true 1.0 1.0 1.0 1.0];
+      custom-colors = [(mkTuple [0.0 0.75 0.75 1.0]) (mkTuple [0.0 0.699999988079071 0.8999999761581421 1.0]) (mkTuple [0.0 0.699999988079071 0.75 1.0]) (mkTuple [0.125 0.125 0.125 1.0]) (mkTuple [0.0 0.6100000143051147 0.7400000095367432 1.0])];
+      selected-color = mkTuple [true 0.7529411911964417 0.3803921639919281 0.7960784435272217 1.0];
     };
 
     "org/gtk/gtk4/settings/emoji-chooser" = {
-      recently-used-emoji = [(mkTuple [(mkTuple [[(mkUint32 10004) 65039] "check mark" "check mark" ["check" "checked" "checkmark" "done" "heavy" "mark" "tick" "\10003"] ["check" "checked" "checkmark" "done" "heavy" "mark" "tick" "\10003"] (mkUint32 8)]) (mkUint32 0)]) (mkTuple [(mkTuple [[128077 127995] "thumbs up" "thumbs up" ["+1" "good" "hand" "like" "thumb" "up" "yes"] ["+1" "good" "hand" "like" "thumb" "up" "yes"] 1]) 0])];
+      recently-used-emoji = [(mkTuple [(mkTuple [[(mkUint32 10004) 65039] "check mark" "check mark" ["check" "checked" "checkmark" "done" "heavy" "mark" "tick" "10003"] ["check" "checked" "checkmark" "done" "heavy" "mark" "tick" "10003"] (mkUint32 8)]) (mkUint32 0)]) (mkTuple [(mkTuple [[128077 127995] "thumbs up" "thumbs up" ["+1" "good" "hand" "like" "thumb" "up" "yes"] ["+1" "good" "hand" "like" "thumb" "up" "yes"] 1]) 0])];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {

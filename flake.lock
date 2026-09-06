@@ -122,11 +122,29 @@
         "type": "github"
       }
     },
+    "openbar-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1780279499,
+        "narHash": "sha256-tMPRGUHIJLawwTQHNzckiRa/AXDMKaq4LrXKTUHyZZc=",
+        "owner": "jasonpiedrasantasdk",
+        "repo": "openbar",
+        "rev": "1baac47244ecd0fad31196240963cf0738ef7beb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jasonpiedrasantasdk",
+        "repo": "openbar",
+        "rev": "1baac47244ecd0fad31196240963cf0738ef7beb",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
+        "openbar-src": "openbar-src",
         "vicinae": "vicinae",
         "vicinae-extensions": "vicinae-extensions"
       }

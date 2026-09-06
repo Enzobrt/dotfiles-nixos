@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  openbar-src,
+  ...
+}: let
   # ES-DE wrapper
   es-de = pkgs.appimageTools.wrapType2 {
     pname = "emulationstation-de";
@@ -61,12 +65,27 @@
           --replace-fail 'label=games_no,' 'label=str(games_no),'
       '';
   });
+
+  # Openbar - gnome 50
+  openbar = pkgs.stdenvNoCC.mkDerivation {
+    pname = "openbar";
+    version = "50";
+
+    src = openbar-src;
+
+    installPhase = ''
+      mkdir -p $out/share/gnome-shell/extensions/openbar@neuromorph
+      cp -r ./* $out/share/gnome-shell/extensions/openbar@neuromorph/
+    '';
+  };
 in {
   home.packages = with pkgs; [
     ## System
     #vicinae # Desactivado xq se configurar en viciane.nix
     wine
     xclicker
+
+    openbar
 
     ## Gnome
     baobab

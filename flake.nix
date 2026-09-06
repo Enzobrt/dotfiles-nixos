@@ -17,6 +17,11 @@
       url = "github:vicinaehq/extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    openbar-src = {
+      url = "github:jasonpiedrasantasdk/openbar/1baac47244ecd0fad31196240963cf0738ef7beb";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -26,6 +31,7 @@
     nix-flatpak,
     vicinae,
     vicinae-extensions,
+    openbar-src,
     ...
   }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -53,7 +59,7 @@
           home-manager.backupFileExtension = "backup";
 
           home-manager.extraSpecialArgs = {
-            inherit vicinae vicinae-extensions;
+            inherit vicinae vicinae-extensions openbar-src;
             colors = import ./home/colors.nix;
           };
 
