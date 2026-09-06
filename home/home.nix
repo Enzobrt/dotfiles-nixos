@@ -34,6 +34,7 @@
     ./programs/syncthing.nix
     ./programs/kdeconnect.nix
     ./programs/brave.nix
+    ./programs/wofi.nix
   ];
 
   home.username = "enzo";

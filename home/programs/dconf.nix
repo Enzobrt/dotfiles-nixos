@@ -1,4 +1,3 @@
-# a
 # Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
 {lib, ...}:
 with lib.hm.gvariant; {
@@ -626,7 +625,7 @@ with lib.hm.gvariant; {
       command-history = ["autoclicker-toggle" "impala" "ghostty -e wiremix"];
       disable-user-extensions = false;
       disabled-extensions = ["workspace-bar@jguece" "lan-ip-address@mrhuber.com"];
-      enabled-extensions = ["appindicatorsupport@rgcjonas.gmail.com" "gsconnect@andyholmes.github.io" "caffeine@patapon.info" "media-keys@mafflin" "system-monitor-panel@naimur" "ResourceBuzzLite@hridoybuzz.dev" "emailmonitor@j-rambo.github.io" "syncthing@gnome.2nv2u.com" "top-bar-organizer@julian.gse.jsts.xyz" "openbar@neuromorph" "appindicatorsupport@rgcjonas.gmail.com" "gsconnect@andyholmes.github.io" "syncthing@gnome.2nv2u.com" "caffeine@patapon.info" "top-bar-organizer@julian.gse.jsts.xyz" "Resource_Monitor@Ory0n"];
+      enabled-extensions = ["appindicatorsupport@rgcjonas.gmail.com" "gsconnect@andyholmes.github.io" "caffeine@patapon.info" "media-keys@mafflin" "system-monitor-panel@naimur" "ResourceBuzzLite@hridoybuzz.dev" "emailmonitor@j-rambo.github.io" "syncthing@gnome.2nv2u.com" "top-bar-organizer@julian.gse.jsts.xyz" "openbar@neuromorph" "appindicatorsupport@rgcjonas.gmail.com" "gsconnect@andyholmes.github.io" "syncthing@gnome.2nv2u.com" "caffeine@patapon.info" "top-bar-organizer@julian.gse.jsts.xyz" "Resource_Monitor@Ory0n" "appindicatorsupport@rgcjonas.gmail.com" "lan-ip-address@mrhuber.com" "gsconnect@andyholmes.github.io" "syncthing@gnome.2nv2u.com" "caffeine@patapon.info" "Resource_Monitor@Ory0n" "top-bar-organizer@julian.gse.jsts.xyz"];
       favorite-apps = [];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "50.4";
@@ -676,7 +675,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/shell/extensions/gsconnect/device/7a5b479c4c3f4082acc761ca3546fd53/plugin/notification" = {
       applications = ''
-        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Events and Tasks Reminders":{"iconName":"org.gnome.Evolution-alarm-notify","enabled":true},"Pika Backup":{"iconName":"org.gnome.World.PikaBackup","enabled":true},"Zenity":{"iconName":"application-x-executable","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Online Accounts":{"iconName":"org.gnome.goa-daemon-symbolic","enabled":true},"Ghostty":{"iconName":"com.mitchellh.ghostty","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color Management":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Pika Backup Monitor":{"iconName":"org.gnome.World.PikaBackup","enabled":true}}
+        {"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Events and Tasks Reminders":{"iconName":"org.gnome.Evolution-alarm-notify","enabled":true},"Pika Backup":{"iconName":"org.gnome.World.PikaBackup","enabled":true},"Zenity":{"iconName":"application-x-executable","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Online Accounts":{"iconName":"org.gnome.goa-daemon-symbolic","enabled":true},"Ghostty":{"iconName":"com.mitchellh.ghostty","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Console":{"iconName":"org.gnome.Console","enabled":true},"Color Management":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Pika Backup Monitor":{"iconName":"org.gnome.World.PikaBackup","enabled":true}}\n
       '';
     };
 
@@ -719,7 +718,7 @@ with lib.hm.gvariant; {
       balpha = 0.39;
       bartype = "Trilands";
       bcolor = ["0.871" "0.616" "0.498"];
-      bg-change = false;
+      bg-change = true;
       bgalpha = 0.0;
       bgalpha-wmax = 1.0;
       bgalpha2 = 0.9;
@@ -727,7 +726,7 @@ with lib.hm.gvariant; {
       bgcolor-wmax = ["0.129" "0.122" "0.129"];
       bgcolor2 = ["0.420" "0.608" "0.420"];
       bgpalette = false;
-      bguri = "file:///home/enzo/.config/background";
+      bguri = "file:///etc/nixos/home/assets/wallpaper.png";
       border-wmax = false;
       bordertype = "solid";
       bottom-margin = 2.5;
@@ -775,7 +774,7 @@ with lib.hm.gvariant; {
       dark-bgcolor = ["0.282" "0.306" "0.298"];
       dark-bgcolor-wmax = ["0.129" "0.122" "0.129"];
       dark-bgcolor2 = ["0.420" "0.608" "0.420"];
-      dark-bguri = "file:///home/enzo/.config/background";
+      dark-bguri = "file:///etc/nixos/home/assets/wallpaper.png";
       dark-boxcolor = ["0.282" "0.306" "0.298"];
       dark-candy1 = ["0" "0.61" "0.74"];
       dark-candy10 = ["0.09" "0.19" "0.72"];
@@ -855,7 +854,7 @@ with lib.hm.gvariant; {
       light-bgcolor = ["0.169" "0.349" "0.435"];
       light-bgcolor-wmax = ["0.918" "0.910" "0.918"];
       light-bgcolor2 = ["0.929" "0.675" "0.424"];
-      light-bguri = "file:///home/enzo/.config/background";
+      light-bguri = "file:///etc/nixos/home/assets/wallpaper.png";
       light-boxcolor = ["0.169" "0.349" "0.435"];
       light-candy1 = ["0" "0.61" "0.74"];
       light-candy10 = ["0.09" "0.19" "0.72"];
@@ -948,7 +947,7 @@ with lib.hm.gvariant; {
       radius-bottomright = true;
       radius-topleft = true;
       radius-topright = true;
-      reloadstyle = false;
+      reloadstyle = true;
       removestyle = false;
       sbar-gradient = "none";
       set-bottom-margin = false;
@@ -969,7 +968,7 @@ with lib.hm.gvariant; {
       success-color = ["0.15" "0.635" "0.41"];
       traffic-light = true;
       trigger-autotheme = true;
-      trigger-reload = true;
+      trigger-reload = false;
       use-system-accent = false;
       view-hint = 2;
       vpad = 2.9;
@@ -1000,19 +999,19 @@ with lib.hm.gvariant; {
       diskdevicesdisplayall = true;
       diskdeviceslist = [
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1p2","stableId":"/dev/disk/by-uuid/bd0f3464-e7ce-4c0a-8564-de87eacd1702","mountPoint":"/","stats":false,"space":true,"displayName":"z"}\n
+          {"version":2,"type":"disk","device":"/dev/nvme0n1p2","stableId":"/dev/disk/by-uuid/bd0f3464-e7ce-4c0a-8564-de87eacd1702","mountPoint":"/","stats":false,"space":false,"displayName":"/dev/nvme0n1p2"}
         ''
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1p2","stableId":"/dev/disk/by-uuid/bd0f3464-e7ce-4c0a-8564-de87eacd1702","mountPoint":"/nix/store","stats":false,"space":false,"displayName":"/dev/nvme0n1p2"}\n
+          {"version":2,"type":"disk","device":"/dev/nvme0n1p2","stableId":"/dev/disk/by-uuid/bd0f3464-e7ce-4c0a-8564-de87eacd1702","mountPoint":"/nix/store","stats":false,"space":false,"displayName":"/dev/nvme0n1p2"}
         ''
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1p1","stableId":"/dev/disk/by-uuid/4342-37A9","mountPoint":"/boot","stats":false,"space":false,"displayName":"/dev/nvme0n1p1"}\n
+          {"version":2,"type":"disk","device":"/dev/nvme0n1p1","stableId":"/dev/disk/by-uuid/4342-37A9","mountPoint":"/boot","stats":false,"space":false,"displayName":"/dev/nvme0n1p1"}
         ''
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1","stableId":"/dev/disk/by-id/nvme-Micron_MTFDKCD512QGN-1BN1AABLA_25465476450F","mountPoint":"","stats":false,"space":false,"displayName":"/dev/nvme0n1"}\n
+          {"version":2,"type":"disk","device":"/dev/nvme0n1","stableId":"/dev/disk/by-id/nvme-Micron_MTFDKCD512QGN-1BN1AABLA_25465476450F","mountPoint":"","stats":false,"space":false,"displayName":"/dev/nvme0n1"}
         ''
         ''
-          {"version":2,"type":"disk","device":"/dev/nvme0n1p3","stableId":"/dev/disk/by-uuid/cb242bc3-1021-4631-9a0f-315a50d4a1e1","mountPoint":"","stats":false,"space":false,"displayName":"/dev/nvme0n1p3"}\n
+          {"version":2,"type":"disk","device":"/dev/nvme0n1p3","stableId":"/dev/disk/by-uuid/cb242bc3-1021-4631-9a0f-315a50d4a1e1","mountPoint":"","stats":false,"space":false,"displayName":"/dev/nvme0n1p3"}
         ''
       ];
       diskshowdevicename = true;
@@ -1027,7 +1026,7 @@ with lib.hm.gvariant; {
       gpucolors = ["65 0.9647058844566345 0.8274509906768799 0.1764705926179886" "80 1 0.47058823704719543 0" "92 0.8784313797950745 0.10588235408067703 0.1411764770746231"];
       gpudeviceslist = [
         ''
-          {"version":2,"type":"gpu","device":"amd:card2","name":"AMD GPU 0x1681","usage":true,"memory":false,"displayName":"GPU"}\n
+          {"version":2,"type":"gpu","device":"amd:card2","name":"AMD GPU 0x1681","usage":false,"memory":false,"displayName":"AMD GPU 0x1681"}
         ''
       ];
       gpumemorycolors = [];
@@ -1057,7 +1056,7 @@ with lib.hm.gvariant; {
       thermalcpucolors = [];
       thermalcputemperaturedeviceslist = [
         ''
-          {"version":2,"type":"thermal-cpu","name":"k10temp: Tctl","monitor":true,"path":"/sys/class/hwmon/hwmon3/temp1_input"}\n
+          {"version":2,"type":"thermal-cpu","name":"k10temp: Tctl","monitor":false,"path":"/sys/class/hwmon/hwmon3/temp1_input"}
         ''
       ];
       thermalcputemperaturestatus = true;
@@ -1065,7 +1064,7 @@ with lib.hm.gvariant; {
       thermalgpucolors = [];
       thermalgputemperaturedeviceslist = [
         ''
-          {"version":2,"type":"thermal-gpu","device":"amd:card2","name":"AMD GPU 0x1681","monitor":true}\n
+          {"version":2,"type":"thermal-gpu","device":"amd:card2","name":"AMD GPU 0x1681","monitor":false}
         ''
       ];
       thermalgputemperaturestatus = true;
@@ -1105,8 +1104,8 @@ with lib.hm.gvariant; {
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [(mkTuple [0.0 0.75 0.75 1.0]) (mkTuple [0.0 0.699999988079071 0.8999999761581421 1.0]) (mkTuple [0.0 0.699999988079071 0.75 1.0]) (mkTuple [0.125 0.125 0.125 1.0]) (mkTuple [0.0 0.6100000143051147 0.7400000095367432 1.0])];
-      selected-color = mkTuple [true 0.7529411911964417 0.3803921639919281 0.7960784435272217 1.0];
+      custom-colors = [(mkTuple [0.0 0.75 0.75 1.0]) (mkTuple [0.0 0.7 0.9 1.0]) (mkTuple [0.0 0.7 0.75 1.0]) (mkTuple [0.125 0.125 0.125 1.0]) (mkTuple [0.0 0.61 0.74 1.0])];
+      selected-color = mkTuple [true 0.752941 0.380392 0.796078 1.0];
     };
 
     "org/gtk/gtk4/settings/emoji-chooser" = {

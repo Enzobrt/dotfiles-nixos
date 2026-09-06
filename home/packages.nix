@@ -155,7 +155,8 @@ in {
 
     ## Terminal
     ghostty
-    wofi #rofi is not supported in gnome
+    wofi
+    rofi
 
     lf
     yazi

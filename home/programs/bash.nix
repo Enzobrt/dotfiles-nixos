@@ -10,6 +10,7 @@
       task = "nvim ~/Documents/notas-obsidian/tasks.md";
       notas = "cd ~/Documents/notas-obsidian/ && nvim '$(find **md  **/*md -type f | fzf --cycle)'";
       empezados = " nvim ~/Documents/notas-obsidian/empezados.md";
+      chwall = "/home/enzo/Documents/Programación/scripts/wallpaper-switch.sh";
     };
     initExtra = ''
       export EDITOR="nvim"
