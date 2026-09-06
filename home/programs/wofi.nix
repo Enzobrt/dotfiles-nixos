@@ -4,7 +4,7 @@
 
     settings = {
       single_window = true;
-      hide_on_focus_loss = true;
+      close_on_focus_loss = true;
 
       location = "bottom";
       yoffset = -80;

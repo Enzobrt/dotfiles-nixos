@@ -153,6 +153,9 @@ in {
     kdePackages.kdenlive
     davinci-resolve
 
+    ## Automation
+    actiona
+
     ## Terminal
     ghostty
     wofi
