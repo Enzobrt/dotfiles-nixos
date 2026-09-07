@@ -14,6 +14,8 @@
 
     ./theme.nix
 
+    ./programs/ollama.nix
+
     ./programs/dconf.nix
     ./programs/services.nix
     ./programs/bash.nix

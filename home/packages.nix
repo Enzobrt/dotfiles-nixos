@@ -151,7 +151,9 @@ in {
     ani-cli # Descargar animes y mangas
 
     kdePackages.kdenlive
-    davinci-resolve
+
+    ## AI
+    ollama
 
     ## Automation
     crossmacro

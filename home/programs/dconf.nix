@@ -157,12 +157,6 @@ with lib.hm.gvariant; {
       translate = false;
     };
 
-    "org/gnome/desktop/app-folders/folders/0cfb78d2-030e-4ef5-be85-77458ee715c3" = {
-      apps = ["davinci-resolve.desktop" "davinci-fairlight-studio-utility.desktop" "blackmagicraw-speedtest.desktop" "blackmagicraw-player.desktop" "davinci-control-panels-setup.desktop"];
-      name = "Davinci resolve";
-      translate = false;
-    };
-
     "org/gnome/desktop/app-folders/folders/10934f49-0e58-47f3-8946-b095f6f55c10" = {
       apps = ["org.gnome.TextEditor.desktop" "org.gnome.eog.desktop" "org.gnome.Yelp.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Calendar.desktop" "org.gnome.tweaks.desktop" "org.gnome.Extensions.desktop" "org.gnome.Settings.desktop" "net.nokyan.Resources.desktop" "org.gnome.baobab.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.SimpleScan.desktop" "org.gnome.Characters.desktop" "cups.desktop" "org.gnome.Calculator.desktop" "org.gnome.font-viewer.desktop" "org.gnome.Snapshot.desktop" "io.gitlab.adhami3310.Converter.desktop" "org.gnome.Logs.desktop" "org.gnome.clocks.desktop"];
       name = "gnome bs";
@@ -266,7 +260,7 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = ["org-gnome-epiphany" "org-gnome-settings" "org-gnome-nautilus" "org-gnome-console" "gnome-about-panel" "brave-browser" "gnome-power-panel" "vesktop" "audacity" "org-keepassxc-keepassxc" "org-kde-kdeconnect-daemon" "org-kde-kdeconnect-app" "org-gnome-texteditor" "org-gnome-shell-extensions-gsconnect" "android-studio" "ryujinx" "modrinth-app" "vicinae" "davinci-resolve" "org-gnome-baobab" "gimp" "com-mitchellh-ghostty" "org-gnome-shell-extensions-gsconnect-preferences"];
+      application-children = ["org-gnome-epiphany" "org-gnome-settings" "org-gnome-nautilus" "org-gnome-console" "gnome-about-panel" "brave-browser" "gnome-power-panel" "vesktop" "audacity" "org-keepassxc-keepassxc" "org-kde-kdeconnect-daemon" "org-kde-kdeconnect-app" "org-gnome-texteditor" "org-gnome-shell-extensions-gsconnect" "android-studio" "ryujinx" "modrinth-app" "vicinae" "org-gnome-baobab" "gimp" "com-mitchellh-ghostty" "org-gnome-shell-extensions-gsconnect-preferences"];
     };
 
     "org/gnome/desktop/notifications/application/android-studio" = {
@@ -283,10 +277,6 @@ with lib.hm.gvariant; {
 
     "org/gnome/desktop/notifications/application/com-mitchellh-ghostty" = {
       application-id = "com.mitchellh.ghostty.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/davinci-resolve" = {
-      application-id = "davinci-resolve.desktop";
     };
 
     "org/gnome/desktop/notifications/application/gimp" = {
