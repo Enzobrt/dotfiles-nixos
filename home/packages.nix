@@ -21,7 +21,7 @@
 
     src = pkgs.fetchurl {
       url = "https://curseforge.overwolf.com/downloads/curseforge-latest-linux.AppImage";
-      hash = "sha256-ZH4ZkFSoT8bQgcQPkszcux4gds4DHwrD7Vyub+13mgQ=";
+      hash = "sha256-oyyafO42ysqodDbSog58kV3zg3F2ajVB1/ppeveaQK4=";
     };
   };
 
@@ -142,6 +142,7 @@ in {
     es-de
     rpcs3
     ryubing
+    dolphin-emu
 
     ## Media
     mpv
@@ -154,6 +155,7 @@ in {
 
     ## AI
     ollama
+    opencode
 
     ## Automation
     crossmacro
@@ -251,18 +253,6 @@ in {
     Icon=applications-games
     Terminal=false
     Type=Application
-    Categories=Game;
-  '';
-
-  home.file.".local/share/applications/tinywii.desktop".text = ''
-    [Desktop Entry]
-    Name=TinyWiiBackupManager
-    Comment=Wii and GameCube backup manager
-    Exec=tinywii-backup-manager
-    Icon=applications-games
-    Terminal=false
-    Type=Application
-    Path=/home/enzo
     Categories=Game;
   '';
 

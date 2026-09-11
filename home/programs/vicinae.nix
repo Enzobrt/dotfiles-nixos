@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   vicinae,
   vicinae-extensions,
@@ -47,5 +48,9 @@
       power-profile
       it-tools
     ];
+  };
+
+  home.file."local/share/vicinae/scripts" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/enzo/Documents/Programación";
   };
 }

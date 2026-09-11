@@ -37,6 +37,8 @@
     ./programs/kdeconnect.nix
     ./programs/brave.nix
     ./programs/wofi.nix
+    ./programs/wheelwizard.nix
+    ./programs/dolphin.nix
   ];
 
   home.username = "enzo";
