@@ -230,6 +230,7 @@ in {
         mplcursors
         numpy
         keyboard
+        random2
       ]))
   ];
 
