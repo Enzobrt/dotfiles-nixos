@@ -74,6 +74,7 @@
       pango
       cairo
       dbus
+      xorg.libXtst
     ];
   };
 
