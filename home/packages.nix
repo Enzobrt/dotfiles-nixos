@@ -167,6 +167,8 @@ in {
     rofi
     fuzzel
 
+    fastfetch
+
     lf
     yazi
     fzf
