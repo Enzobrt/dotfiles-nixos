@@ -116,6 +116,7 @@ in {
     audacity-4
     libreoffice
     gimp
+    aseprite
     obs-studio
     zathura
     blender
