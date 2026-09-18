@@ -22,6 +22,8 @@
       url = "github:jasonpiedrasantasdk/openbar/1baac47244ecd0fad31196240963cf0738ef7beb";
       flake = false;
     };
+
+    opencode.url = "github:anomalyco/opencode/014614d35b397775e5d397a490fc72368c894ec2";
   };
 
   outputs = {
@@ -32,22 +34,31 @@
     vicinae,
     vicinae-extensions,
     openbar-src,
+    opencode,
     ...
   }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
       specialArgs = {
-        inherit home-manager;
+        inherit home-manager opencode;
       };
 
       modules = [
         ./configuration.nix
-        {
-          environment.systemPackages = [
-            home-manager.packages.x86_64-linux.default
-          ];
-        }
+        (
+          {opencode, ...}: {
+            nixpkgs.overlays = [
+              (final: prev: {
+                opencode = opencode.packages.${final.system}.default;
+              })
+            ];
+
+            environment.systemPackages = [
+              home-manager.packages.x86_64-linux.default
+            ];
+          }
+        )
 
         vicinae.nixosModules.default
 
