@@ -1,8 +1,6 @@
 warning: Git tree '/etc/nixos' is dirty
 building the system configuration...
 warning: Git tree '/etc/nixos' is dirty
-evaluation warning: 'system' has been renamed to/replaced by 'stdenv.hostPlatform.system'
-evaluation warning: The xorg package set has been deprecated, 'xorg.libXtst' has been renamed to 'libxtst'
 Checking switch inhibitors... done
 activating the configuration...
 setting up /etc...
@@ -10,4 +8,4 @@ reloading user units for enzo...
 restarting the following user units: nixos-activation.service
 restarting sysinit-reactivation.target
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/pa8ml2fqmnw0mfhrkiwnyqw7545dz7f5-nixos-system-nixos-26.05.20260917.ecc58f3
+Done. The new configuration is /nix/store/86hg86zyjyw6k7hshva0bf8nqarym1dr-nixos-system-nixos-26.05.20260917.ecc58f3

@@ -1,16 +1,16 @@
 {pkgs, ...}: let
   wheelwizard = pkgs.stdenv.mkDerivation {
     pname = "wheelwizard";
-    version = "2.5.4";
+    version = "2.5.7";
 
     src = pkgs.fetchurl {
-      url = "https://github.com/TeamWheelWizard/WheelWizard/releases/download/v2.5.4/WheelWizard_Linux";
-      hash = "sha256-DgLnnBLixSzzzJP1Xjzd8jrNnVbx81n7DQQrFa5y5Us=";
+      url = "https://github.com/TeamWheelWizard/WheelWizard/releases/download/v2.5.7/WheelWizard_Linux";
+      hash = "sha256-RsND4drVu3sO5riym3GgRU5sFRogBVsI6dCl88MTGv8=";
     };
 
     icon = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/TeamWheelWizard/WheelWizard/v2.5.4/Flatpak/io.github.TeamWheelWizard.WheelWizard.png";
-      hash = "sha256-W/gUx0b85QqtrBglB0w+iCz1cP+Gfa7HguJiem5736Y=";
+      url = "https://raw.githubusercontent.com/TeamWheelWizard/WheelWizard/v2.5.7/Flatpak/io.github.TeamWheelWizard.WheelWizard.png";
+      hash = "sha256-0FWum5kdqU0BZZjZPjbwF3xglZgAEkDMbK6W9uVkoe4=";
     };
 
     nativeBuildInputs = with pkgs; [
@@ -20,6 +20,11 @@
     ];
 
     buildInputs = with pkgs; [
+      wayland
+      libxkbcommon
+      libdrm
+      libdecor
+      mesa.out
       libGL
       libx11
       libxcursor
@@ -74,6 +79,11 @@
         --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath [
         pkgs.icu.out
         pkgs.libglvnd
+        pkgs.wayland
+        pkgs.libxkbcommon
+        pkgs.libdrm
+        pkgs.libdecor
+        pkgs.mesa.out
         pkgs.libGL
         pkgs.libx11
         pkgs.libxcursor

@@ -120,6 +120,7 @@ in {
     obs-studio
     zathura
     blender
+    librecad
     obsidian
     keepassxc
     #arduino
@@ -189,11 +190,15 @@ in {
     mpc
     mpd
     mpd-mpris
-    wiremix
     yt-dlp
     patch
 
+    ##
+    wiremix
     wifitui
+    #impala # No funciona sin iwd
+    bluetui
+    bluetuith
 
     typer
 
