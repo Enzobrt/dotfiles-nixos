@@ -116,6 +116,7 @@ in {
     audacity-4
     libreoffice
     gimp
+    imagemagick
     aseprite
     obs-studio
     zathura
@@ -204,6 +205,7 @@ in {
     typer
 
     ydotool
+    xclip
 
     alejandra
 
