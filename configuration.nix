@@ -10,6 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./rtl8852bd
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -176,6 +177,9 @@
       rocmPackages.clr.icd
     ]; # habilita Rusticl (OpenCL)
   };
+
+  # Bluetooth (Realtek RTL8852BU via patched btrtl).
+  hardware.bluetooth.enable = true;
 
   # Scheduled optimise
   nix.optimise.automatic = true;
