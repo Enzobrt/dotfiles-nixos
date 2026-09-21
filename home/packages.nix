@@ -192,11 +192,12 @@ in {
     mpd-mpris
     yt-dlp
     patch
-
-    ##
     wiremix
+    pulsemeeter
+
     wifitui
     #impala # No funciona sin iwd
+
     bluetui
     bluetuith
 

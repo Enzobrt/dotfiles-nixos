@@ -132,6 +132,48 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Brother DCP-L2620DW: it does not speak PCL/PostScript, but it does
+  # support driverless IPP Everywhere over IPP-over-USB, so expose it as a
+  # local IPP printer via ipp-usb and create the queue with "everywhere".
+  services.ipp-usb.enable = true;
+
+  # Resolve mDNS (.local) names so the printer is reachable over the network too.
+  services.avahi.nssmdns4 = true;
+
+  hardware.printers = {
+    ensureDefaultPrinter = "Brother_DCP-L2620DW";
+    ensurePrinters = [
+      {
+        name = "Brother_DCP-L2620DW";
+        location = "Home";
+        description = "Brother DCP-L2620DW";
+        deviceUri = "ipp://localhost:60000/ipp/print";
+        model = "everywhere";
+        ppdOptions.PageSize = "A4";
+      }
+    ];
+  };
+
+  # ipp-usb only listens once the USB device is claimed, so wait for its
+  # endpoint before running "lpadmin -m everywhere" (which queries the printer).
+  systemd.services.ensure-printers = {
+    wants = ["ipp-usb.service"];
+    after = ["ipp-usb.service"];
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = 5;
+      ExecStartPre = "${pkgs.writeShellScript "wait-for-ipp-usb" ''
+        for _ in $(seq 1 120); do
+          if (exec 3<>/dev/tcp/127.0.0.1/60000) 2>/dev/null; then
+            exit 0
+          fi
+          sleep 1
+        done
+        exit 1
+      ''}";
+    };
+  };
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
