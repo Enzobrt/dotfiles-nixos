@@ -82,7 +82,7 @@ in {
   home.packages = with pkgs; [
     ## System
     #vicinae # Desactivado xq se configurar en viciane.nix
-    wine
+    wineWow64Packages.stableFull
     xclicker
 
     openbar
@@ -114,6 +114,7 @@ in {
     vim
     #audacity
     audacity-4
+    easyeffects
     libreoffice
     gimp
     imagemagick
@@ -132,11 +133,13 @@ in {
 
     ## Games
     gamemode
+    gamescope
     tinywii
 
     #mindustry-wrapper
 
     steam
+    heroic
     modrinth-app
     curseforge
     r2modman
@@ -244,6 +247,11 @@ in {
         random2
       ]))
   ];
+
+  home.file.".cache/wine/wine-mono-10.4.1-x86.msi".source = pkgs.fetchurl {
+    url = "https://dl.winehq.org/wine/wine-mono/10.4.1/wine-mono-10.4.1-x86.msi";
+    hash = "sha256-Bx9LKIfhyXoR15H/PWW+lCnu1t7EwnCIiL/VRro1jiM=";
+  };
 
   home.file.".local/share/applications/es-de.desktop".text = ''
     [Desktop Entry]

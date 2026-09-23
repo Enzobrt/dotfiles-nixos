@@ -203,11 +203,17 @@
     ];
   };
 
-  # Scheduled garbage collecting
+  # Keep at most this many system generations (rollback depth).
+  # This is also enforced on every nixos-rebuild.
+  boot.loader.systemd-boot.configurationLimit = 5;
+
+  # Scheduled garbage collecting.
+  # NOTE: nix-collect-garbage does NOT accept --delete-generations;
+  # the old value made nix-gc.service fail every run.
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-generations +10"; # Or use a custom script for count-based pruning
+    options = "--delete-older-than 14d";
   };
 
   # Hardware settings
@@ -225,12 +231,27 @@
 
   # Scheduled optimise
   nix.optimise.automatic = true;
-  nix.optimise.dates = ["Mon 04:00" "Fri 04:00"]; # Optional; allows customizing optimisation schedule
+  nix.optimise.dates = ["daily"];
 
-  # Free up to 1GiB whenever there is less than 100MiB left:
+  nix.settings = {
+    # Deduplicate store paths as they are added (same effect as nix optimise).
+    auto-optimise-store = true;
+    # Let GC drop .drv files and dev outputs that nothing references.
+    keep-derivations = false;
+    keep-outputs = false;
+  };
+
+  # Start automatic GC when free space drops below 5 GiB,
+  # and free up to 50 GiB in one go.
   nix.extraOptions = ''
-    min-free = ${toString (100 * 1024 * 1024)}
-    max-free = ${toString (1024 * 1024 * 1024)}
+    min-free = ${toString (5 * 1024 * 1024 * 1024)}
+    max-free = ${toString (50 * 1024 * 1024 * 1024)}
+  '';
+
+  # Cap the journal (was ~4 GiB).
+  services.journald.extraConfig = ''
+    SystemMaxUse=400M
+    SystemMaxFileSize=50M
   '';
 
   # Disable xterm
