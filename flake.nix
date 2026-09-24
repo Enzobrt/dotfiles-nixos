@@ -24,6 +24,12 @@
     };
 
     opencode.url = "github:anomalyco/opencode/014614d35b397775e5d397a490fc72368c894ec2";
+
+    # Build nativo de Linux de PolyTrack (Electron), descargado de itch.io
+    polytrack-src = {
+      url = "path:/home/enzo/Games/polytrack-linux-x64.tar.gz";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -35,6 +41,7 @@
     vicinae-extensions,
     openbar-src,
     opencode,
+    polytrack-src,
     ...
   }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -50,7 +57,7 @@
           {opencode, ...}: {
             nixpkgs.overlays = [
               (final: prev: {
-                opencode = opencode.packages.${final.system}.default;
+                opencode = opencode.packages.${final.stdenv.hostPlatform.system}.default;
               })
             ];
 
@@ -70,7 +77,7 @@
           home-manager.backupFileExtension = "backup";
 
           home-manager.extraSpecialArgs = {
-            inherit vicinae vicinae-extensions openbar-src;
+            inherit vicinae vicinae-extensions openbar-src polytrack-src;
             colors = import ./home/colors.nix;
           };
 

@@ -97,6 +97,7 @@ in {
     simple-scan
 
     pika-backup
+    backintime
     cartridges-fixed
     gnome-music
     gnome-calculator
@@ -155,7 +156,7 @@ in {
     jellyfin
     #vlc
 
-    ani-cli # Descargar animes y mangas
+    # ani-cli # Descargar animes y mangas
 
     kdePackages.kdenlive
 

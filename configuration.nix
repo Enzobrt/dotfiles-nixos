@@ -4,6 +4,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   # Import stuff from other places
@@ -39,6 +40,9 @@
       "quiet"
       "rd.udev.log_level=3"
       "rd.systemd.show_status=auto"
+      # TEMPORARY diagnostic: plymouth trace to /tmp/plymouth-boot.log.
+      # No visual/boot-time impact. REMOVE after diagnosing the frozen splash.
+      "plymouth.debug=stream:/tmp/plymouth-boot.log"
     ];
 
     # Hide the OS choice for bootloaders.
@@ -75,7 +79,7 @@
       pango
       cairo
       dbus
-      xorg.libXtst
+      libxtst
     ];
   };
 
@@ -215,6 +219,27 @@
     dates = "weekly";
     options = "--delete-older-than 14d";
   };
+
+  # Limit profile generations: keep only the 10 most recent ones on every GC run
+  # (nix.conf has no "keep-generations" setting, so we trim profiles explicitly).
+  systemd.services.nix-gc.serviceConfig.ExecStart = lib.mkForce [
+    ""
+    (pkgs.writeShellScript "nix-gc-trim-generations" ''
+      set +eu
+      for profile in \
+        /nix/var/nix/profiles/system \
+        /nix/var/nix/profiles/default \
+        /nix/var/nix/profiles/per-user/enzo/profile \
+        /nix/var/nix/profiles/per-user/enzo/home-manager
+      do
+        if [ -L "$profile" ]; then
+          ${config.nix.package}/bin/nix-env \
+            -p "$profile" --delete-generations +10 2>/dev/null || true
+        fi
+      done
+      exec ${config.nix.package}/bin/nix-collect-garbage --delete-older-than 14d
+    '')
+  ];
 
   # Hardware settings
   hardware.graphics = {

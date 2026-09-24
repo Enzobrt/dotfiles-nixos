@@ -8,7 +8,7 @@
 #
 # Based on https://github.com/mihaits/rtl8852bd-bt-linux (GPL-2.0).
 {pkgs, ...}: let
-  rtl8852bd-firmware = pkgs.runCommandNoCC "rtl8852bd-eco4-firmware" {} ''
+  rtl8852bd-firmware = pkgs.runCommand "rtl8852bd-eco4-firmware" {} ''
     mkdir -p $out/lib/firmware/rtl_bt
     cp ${./rtl8852bd_eco4.bin} $out/lib/firmware/rtl_bt/rtl8852bd_eco4.bin
   '';

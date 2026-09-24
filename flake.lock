@@ -174,6 +174,19 @@
         "type": "github"
       }
     },
+    "polytrack-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790283504,
+        "narHash": "sha256-JJKe5pmcuTApdS6Z/PJGBsXQLOOsJ1WZTlPhNr1BFqo=",
+        "path": "/home/enzo/Games/polytrack-linux-x64.tar.gz",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/enzo/Games/polytrack-linux-x64.tar.gz",
+        "type": "path"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
@@ -181,6 +194,7 @@
         "nixpkgs": "nixpkgs",
         "openbar-src": "openbar-src",
         "opencode": "opencode",
+        "polytrack-src": "polytrack-src",
         "vicinae": "vicinae",
         "vicinae-extensions": "vicinae-extensions"
       }

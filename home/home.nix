@@ -17,6 +17,7 @@
     ./programs/ollama.nix
 
     ./programs/dconf.nix
+    ./programs/gsconnect.nix
     ./programs/services.nix
     ./programs/bash.nix
     ./programs/xdg.nix
@@ -38,6 +39,7 @@
     ./programs/brave.nix
     ./programs/wofi.nix
     ./programs/wheelwizard.nix
+    ./programs/polytrack.nix
     ./programs/dolphin.nix
   ];
 
