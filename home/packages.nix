@@ -240,11 +240,10 @@ in {
     (python313.withPackages (ps:
       with ps; [
         pandas
-        pygame
+        pygame-ce
         matplotlib
         mplcursors
         numpy
-        keyboard
         random2
       ]))
   ];

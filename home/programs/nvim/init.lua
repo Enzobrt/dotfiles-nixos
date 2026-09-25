@@ -694,7 +694,20 @@ do
   local servers = {
     -- clangd = {},
     -- gopls = {},
-    pylsp = {},
+    pylsp = {
+      settings = {
+        pylsp = {
+          plugins = {
+            -- Que jedi analice con el venv que crea Home Manager
+            -- (home/programs/ursina.nix), donde estan ursina y pygame-ce.
+            -- Sin esto, `import ursina` no resuelve y no hay autocompletado.
+            jedi = {
+              environment = vim.fn.expand '~/.local/share/ursina-env/bin/python',
+            },
+          },
+        },
+      },
+    },
     -- rust_analyzer = {},
     --
     -- Some languages (like typescript) have entire language plugins that can be useful:

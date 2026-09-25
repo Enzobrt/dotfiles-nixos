@@ -41,6 +41,7 @@
     ./programs/wheelwizard.nix
     ./programs/polytrack.nix
     ./programs/dolphin.nix
+    ./programs/ursina.nix
   ];
 
   home.username = "enzo";
