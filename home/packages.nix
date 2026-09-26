@@ -113,6 +113,7 @@ in {
 
     ## Office
     vim
+    tiled
     #audacity
     audacity-4
     easyeffects
