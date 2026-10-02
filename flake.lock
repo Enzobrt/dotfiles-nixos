@@ -16,6 +16,27 @@
         "type": "github"
       }
     },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "tagstudio",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787559586,
+        "narHash": "sha256-onL0VLf9vPllmT0H/OlURIU5r5t5WIEl7t4tVNKT0Nw=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "9d0d87172c374f89da73c1cfe6d81ae62feac1f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -101,6 +122,22 @@
       }
     },
     "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1787736819,
+        "narHash": "sha256-cV5xEJJK3BvhU8rEd4mC9UsmDi5qscv/kzGPhBRC5WA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9fbb54b33e91ee4ca368e35a78e0613c720600b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1787900134,
         "narHash": "sha256-VYXO0XZlgj06dxJZRhrD3WoSsvq/c7+/Akyoa22pefw=",
@@ -195,6 +232,7 @@
         "openbar-src": "openbar-src",
         "opencode": "opencode",
         "polytrack-src": "polytrack-src",
+        "tagstudio": "tagstudio",
         "vicinae": "vicinae",
         "vicinae-extensions": "vicinae-extensions"
       }
@@ -251,12 +289,47 @@
         "type": "github"
       }
     },
+    "systems_3": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "tagstudio": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": "nixpkgs_3",
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1790732453,
+        "narHash": "sha256-PbkVWjseHi1y4I+flggHflFK6ya3D8F7mAvCiihu0H8=",
+        "owner": "TagStudioDev",
+        "repo": "TagStudio",
+        "rev": "359b003676b5c546fb4fee2b5b8b01bc2e5981f7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TagStudioDev",
+        "repo": "TagStudio",
+        "type": "github"
+      }
+    },
     "vicinae": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_4",
         "numen": "numen",
         "soulver-cpp": "soulver-cpp",
-        "systems": "systems"
+        "systems": "systems_2"
       },
       "locked": {
         "lastModified": 1789726996,
@@ -278,7 +351,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "systems": "systems_2",
+        "systems": "systems_3",
         "vicinae": "vicinae_2"
       },
       "locked": {

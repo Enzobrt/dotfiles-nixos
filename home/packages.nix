@@ -162,7 +162,6 @@ in {
     kdePackages.kdenlive
 
     ## AI
-    ollama
     opencode
 
     ## Automation
@@ -235,6 +234,7 @@ in {
     ripgrep
     zenity
     libnotify
+    unrar
 
     ## Programming
     go

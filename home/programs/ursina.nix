@@ -12,8 +12,8 @@
     libxkbcommon
     libpulseaudio
     udev
-    xorg.libX11
-    xorg.libXext
+    libx11
+    libxext
     libxcursor
     libxinerama
     libxi

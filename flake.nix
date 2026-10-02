@@ -30,6 +30,12 @@
       url = "path:/home/enzo/Games/polytrack-linux-x64.tar.gz";
       flake = false;
     };
+
+    # Gestor de etiquetas para fotos y archivos. Se compila desde fuente
+    # (PySide6/Qt), asi que el primer switch tarda bastante.
+    # Sin inputs.nixpkgs.follows: su nix/package usa atributos de Python que
+    # renombraron en nixpkgs 26.05 (chardet_5), asi que necesita su propio pin.
+    tagstudio.url = "github:TagStudioDev/TagStudio";
   };
 
   outputs = {
@@ -72,26 +78,29 @@
         home-manager.nixosModules.home-manager
 
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup";
 
-          home-manager.extraSpecialArgs = {
-            inherit vicinae vicinae-extensions openbar-src polytrack-src;
-            colors = import ./home/colors.nix;
-          };
+            extraSpecialArgs = {
+              inherit vicinae vicinae-extensions openbar-src polytrack-src;
+              inputs = self.inputs;
+              colors = import ./home/colors.nix;
+            };
 
-          home-manager.users.enzo = {
-            config,
-            lib,
-            pkgs,
-            ...
-          }: {
-            imports = [
-              vicinae.homeManagerModules.default
-              nix-flatpak.homeManagerModules.nix-flatpak
-              ./home/home.nix
-            ];
+            users.enzo = {
+              config,
+              lib,
+              pkgs,
+              ...
+            }: {
+              imports = [
+                vicinae.homeManagerModules.default
+                nix-flatpak.homeManagerModules.nix-flatpak
+                ./home/home.nix
+              ];
+            };
           };
         }
       ];

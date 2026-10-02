@@ -3,14 +3,14 @@
     enable = true;
     shellAliases = {
       nx-c = "cd /etc/nixos/";
-      nx-u = "/home/enzo/Documents/Programación/scripts/nixos-update.sh";
-      sc = "cd /home/enzo/Documents/Programación/scripts/";
-      prog = "cd ~/Documents/Programación/ && cd $(find */ -maxdepth 1 -type d | fzf --cycle)";
+      nx-u = "/home/enzo/Documents/programacion/scripts/nixos-update.sh";
+      sc = "cd /home/enzo/Documents/programacion/scripts/";
+      prog = "cd ~/Documents/programacion/ && cd $(find */ -maxdepth 1 -type d | fzf --cycle)";
       cole = "cd ~/Documents/Cole/ && cd $(find */ -maxdepth 1 -type d | fzf --cycle)";
       task = "nvim ~/Documents/notas-obsidian/tasks.md";
       notas = "cd ~/Documents/notas-obsidian/ && nvim $(find **md -type f | fzf --cycle)";
       empezados = " nvim ~/Documents/notas-obsidian/empezados.md";
-      chwall = "/home/enzo/Documents/Programación/scripts/wallpaper-switch.sh";
+      chwall = "/home/enzo/Documents/programacion/scripts/wallpaper-switch.sh";
     };
     initExtra = ''
       export EDITOR="nvim"

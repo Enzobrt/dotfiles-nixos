@@ -14,8 +14,6 @@
 
     ./theme.nix
 
-    ./programs/ollama.nix
-
     ./programs/dconf.nix
     ./programs/gsconnect.nix
     ./programs/services.nix
@@ -42,6 +40,7 @@
     ./programs/polytrack.nix
     ./programs/dolphin.nix
     ./programs/ursina.nix
+    ./programs/tagstudio.nix
   ];
 
   home.username = "enzo";

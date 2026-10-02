@@ -34,10 +34,10 @@
     nss
     pango
     udev
-    xorg.libX11
-    xorg.libxcb
-    xorg.libXcomposite
-    xorg.libXdamage
+    libx11
+    libxcb
+    libxcomposite
+    libxdamage
     libxext
     libxfixes
     libxrandr

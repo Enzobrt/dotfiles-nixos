@@ -709,6 +709,15 @@ do
       },
     },
     -- rust_analyzer = {},
+
+    -- El propio Godot hace de language server de GDScript: abre un socket en el
+    -- puerto 6005 mientras el editor esta abierto, asi que no hay ningun binario
+    -- que instalar. GDScript_Port cambia el puerto.
+    gdscript = {
+      cmd = vim.lsp.rpc.connect('127.0.0.1', tonumber(os.getenv 'GDScript_Port' or 6005)),
+      root_markers = { 'project.godot', '.git' },
+    },
+
     --
     -- Some languages (like typescript) have entire language plugins that can be useful:
     --    https://github.com/pmizio/typescript-tools.nvim
@@ -766,6 +775,10 @@ do
     automatic_enable = false, -- Change this to true if you want to automatically enable servers that are installed manually (e.g. via :Mason / :MasonInstall)
   }
 
+  -- Servidores que no instala Mason porque el binario lo aporta otro programa
+  -- (el LSP de GDScript lo levanta el editor de Godot).
+  local not_from_mason = { gdscript = true }
+
   -- Ensure the servers and tools above are installed
   --
   -- To check the current status of installed tools and/or manually install
@@ -773,7 +786,7 @@ do
   --    :Mason
   --
   -- You can press `g?` for help in this menu.
-  local ensure_installed = vim.tbl_keys(servers or {})
+  local ensure_installed = vim.tbl_filter(function(name) return not not_from_mason[name] end, vim.tbl_keys(servers or {}))
   vim.list_extend(ensure_installed, {
     -- You can add other tools here that you want Mason to install
   })
