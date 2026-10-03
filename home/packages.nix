@@ -95,6 +95,7 @@ in {
     gnome-tweaks
     resources
     simple-scan
+    gnome-builder
 
     pika-backup
     backintime
@@ -160,9 +161,6 @@ in {
     # ani-cli # Descargar animes y mangas
 
     kdePackages.kdenlive
-
-    ## AI
-    opencode
 
     ## Automation
     crossmacro

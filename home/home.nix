@@ -24,6 +24,8 @@
     ./programs/autostart.nix
 
     ./programs/neovim.nix
+    ./programs/emacs.nix
+
     ./programs/ghostty.nix
     ./programs/starship.nix
     ./programs/eww.nix
@@ -41,6 +43,7 @@
     ./programs/dolphin.nix
     ./programs/ursina.nix
     ./programs/tagstudio.nix
+    ./programs/opencode.nix
   ];
 
   home.username = "enzo";
@@ -50,10 +53,10 @@
 
   programs.home-manager.enable = true;
 
-  # Default appps
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
-    GIT_EDITOR = "nvim";
-  };
+  # Default apps
+  # home.sessionVariables = {
+  # EDITOR = "nvim";
+  # VISUAL = "nvim";
+  # GIT_EDITOR = "nvim";
+  # };
 }
