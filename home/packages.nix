@@ -253,15 +253,27 @@ in {
   };
 
   home.file.".local/share/applications/es-de.desktop".text = ''
-    [Desktop Entry]
-    Name=ES-DE
-    Comment=EmulationStation Desktop Edition
-    Exec=emulationstation-de
-    Icon=applications-games
-    Terminal=false
-    Type=Application
-    Path=/home/enzo
-    Categories=Game;Emulator;
+    [desktop entry]
+    name=es-de
+    comment=emulationstation desktop edition
+    exec=emulationstation-de
+    icon=applications-games
+    terminal=false
+    type=application
+    path=/home/enzo
+    categories=game;emulator;
+  '';
+
+  home.file.".local/share/applications/tinywii.desktop".text = ''
+    [desktop entry]
+    name=Tiny wii
+    comment=Tiny wii backup manager
+    exec=tinywii-backup-manager
+    icon=applications-games
+    terminal=false
+    type=application
+    path=/home/enzo
+    categories=game;emulator;
   '';
 
   home.file.".local/share/applications/curseforge.desktop".text = ''

@@ -15,7 +15,6 @@
     ./theme.nix
 
     ./programs/dconf.nix
-    ./programs/gsconnect.nix
     ./programs/services.nix
     ./programs/bash.nix
     ./programs/xdg.nix
@@ -24,25 +23,32 @@
     ./programs/autostart.nix
 
     ./programs/neovim.nix
-    ./programs/emacs.nix
+    # ./programs/emacs.nix
+    ./programs/doom-emacs.nix
 
     ./programs/ghostty.nix
     ./programs/starship.nix
     ./programs/eww.nix
     ./programs/bat.nix
     ./programs/fzf.nix
+    ./programs/wofi.nix
     ./programs/btop.nix
     ./programs/vicinae.nix
-    #./programs/vesktop.nix # No usar, hace que tengas que volver a configurar vesktop
+
+    ./programs/brave.nix
+    # ./programs/vesktop.nix # No usar, hace que tengas que volver a configurar vesktop
+
     ./programs/syncthing.nix
     ./programs/kdeconnect.nix
-    ./programs/brave.nix
-    ./programs/wofi.nix
+    ./programs/gsconnect.nix
+
     ./programs/wheelwizard.nix
     ./programs/polytrack.nix
     ./programs/dolphin.nix
+
     ./programs/ursina.nix
-    ./programs/tagstudio.nix
+    # ./programs/tagstudio.nix
+
     ./programs/opencode.nix
   ];
 

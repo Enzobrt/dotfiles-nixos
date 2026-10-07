@@ -25,17 +25,16 @@
 
     opencode.url = "github:anomalyco/opencode/014614d35b397775e5d397a490fc72368c894ec2";
 
-    # Build nativo de Linux de PolyTrack (Electron), descargado de itch.io
+    # Build nativo de Linux de PolyTrack (Electron)
+    # Descargado de itch.io
     polytrack-src = {
       url = "path:/home/enzo/Games/polytrack-linux-x64.tar.gz";
       flake = false;
     };
 
-    # Gestor de etiquetas para fotos y archivos. Se compila desde fuente
-    # (PySide6/Qt), asi que el primer switch tarda bastante.
-    # Sin inputs.nixpkgs.follows: su nix/package usa atributos de Python que
-    # renombraron en nixpkgs 26.05 (chardet_5), asi que necesita su propio pin.
-    tagstudio.url = "github:TagStudioDev/TagStudio";
+    # tagstudio.url = "github:TagStudioDev/TagStudio";
+
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
   };
 
   outputs = {
@@ -48,6 +47,7 @@
     openbar-src,
     opencode,
     polytrack-src,
+    nix-doom-emacs,
     ...
   }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -98,6 +98,7 @@
               imports = [
                 vicinae.homeManagerModules.default
                 nix-flatpak.homeManagerModules.nix-flatpak
+                nix-doom-emacs.hmModule
                 ./home/home.nix
               ];
             };
