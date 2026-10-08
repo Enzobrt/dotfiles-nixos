@@ -5,7 +5,7 @@
 
   programs.doom-emacs = {
     enable = true;
-    doomDir = ./doom-emacs; # Directory containing your config.el
+    doomDir = ./doom-emacs; # Directory containing *.el
     emacs = pkgs.emacs-pgtk;
   };
 
