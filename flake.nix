@@ -25,7 +25,6 @@
 
     opencode.url = "github:anomalyco/opencode/014614d35b397775e5d397a490fc72368c894ec2";
 
-    # Build nativo de Linux de PolyTrack (Electron)
     # Descargado de itch.io
     polytrack-src = {
       url = "path:/home/enzo/Games/polytrack-linux-x64.tar.gz";
@@ -34,7 +33,10 @@
 
     # tagstudio.url = "github:TagStudioDev/TagStudio";
 
-    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs.nixpkgs.follows = ""; # el módulo usa pkgs de home-manager; menos descarga
+    };
   };
 
   outputs = {
@@ -47,7 +49,7 @@
     openbar-src,
     opencode,
     polytrack-src,
-    nix-doom-emacs,
+    nix-doom-emacs-unstraightened,
     ...
   }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -98,7 +100,7 @@
               imports = [
                 vicinae.homeManagerModules.default
                 nix-flatpak.homeManagerModules.nix-flatpak
-                nix-doom-emacs.hmModule
+                nix-doom-emacs-unstraightened.hmModule
                 ./home/home.nix
               ];
             };

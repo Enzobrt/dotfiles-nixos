@@ -6,6 +6,7 @@
 }: {
   imports = [
     # Import things here
+    # Apps
     ./packages.nix
     ./flatpaks.nix
     ./programs/gnome-extensions.nix
@@ -14,6 +15,7 @@
 
     ./theme.nix
 
+    # System
     ./programs/dconf.nix
     ./programs/services.nix
     ./programs/bash.nix
@@ -22,10 +24,11 @@
     ./programs/ssh.nix
     ./programs/autostart.nix
 
+    # Editor
     ./programs/neovim.nix
-    # ./programs/emacs.nix
-    ./programs/doom-emacs.nix
+    ./programs/emacs.nix
 
+    # Apps
     ./programs/ghostty.nix
     ./programs/starship.nix
     ./programs/eww.nix
