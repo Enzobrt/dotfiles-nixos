@@ -28,8 +28,11 @@
     ./programs/neovim.nix
     ./programs/emacs.nix
 
-    # Apps
+    # Terminal
     ./programs/ghostty.nix
+    ./programs/alacritty.nix
+
+    # Apps
     ./programs/starship.nix
     ./programs/eww.nix
     ./programs/bat.nix

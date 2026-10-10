@@ -7,7 +7,7 @@
       maximize = true;
       background-opacity = 0.8;
       window-decoration = "none";
-      title = "Ghostty";
+      # title = "Ghostty";
 
       working-directory = "home/enzo";
 

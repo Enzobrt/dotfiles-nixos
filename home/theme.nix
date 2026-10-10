@@ -6,13 +6,11 @@
 }: {
   home.packages = with pkgs; [
     ## Fonts
-    #nerd-fonts.jetbrains-mono
+    nerd-fonts.jetbrains-mono
     jetbrains-mono
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
-    liberation_ttf
-    dejavu_fonts
 
     # Icons
     candy-icons
@@ -61,7 +59,7 @@
     };
 
     font = {
-      name = "JetBrains Mono";
+      name = "JetBrainsMono NF";
       size = 11;
     };
   };
@@ -81,9 +79,9 @@
     enable = true;
 
     defaultFonts = {
-      monospace = ["JetBrainsMono Nerd Font Mono"];
-      sansSerif = ["JetBrainsMono Nerd Font"];
-      serif = ["Noto Serif"];
+      monospace = ["JetBrainsMono NF"];
+      sansSerif = ["JetBrainsMono NF"];
+      # serif = ["Noto Serif"];
     };
   };
 
