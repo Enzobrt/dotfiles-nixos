@@ -10,7 +10,7 @@
     };
 
     Service = {
-      ExecStart = "/home/enzo/Documents/Programación/scripts/mc_toggl_track.sh";
+      ExecStart = "/home/enzo/Documents/programacion/scripts/mc-toggl-track.sh";
       Restart = "always";
       RestartSec = 5;
       Environment = [

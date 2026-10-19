@@ -67,6 +67,19 @@
               (final: prev: {
                 opencode = opencode.packages.${final.stdenv.hostPlatform.system}.default;
               })
+
+              (final: prev: {
+                modrinth-app = final.symlinkJoin {
+                  name = "modrinth-app";
+                  paths = [prev.modrinth-app];
+                  nativeBuildInputs = [final.makeWrapper];
+                  postBuild = ''
+                    wrapProgram "$out/bin/ModrinthApp" \
+                      --set WEBKIT_DISABLE_DMABUF_RENDERER 1 \
+                      --set WEBKIT_DISABLE_COMPOSITING_MODE 1
+                  '';
+                };
+              })
             ];
 
             environment.systemPackages = [
