@@ -114,7 +114,8 @@ in {
 
     ## Office
     vim
-    tiled
+    typst
+    typst-live
     #audacity
     audacity-4
     easyeffects
@@ -204,7 +205,9 @@ in {
     bluetui
     bluetuith
 
-    typer
+    tty-clock
+
+    #typer
 
     ydotool
     xclip

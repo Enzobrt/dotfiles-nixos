@@ -12,6 +12,7 @@
       nil
       alejandra
       statix
+      tinymist
     ];
     plugins = with pkgs.vimPlugins; [
       nvim-web-devicons
