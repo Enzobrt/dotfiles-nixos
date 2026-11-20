@@ -41,7 +41,8 @@
     ./programs/btop.nix
     ./programs/vicinae.nix
 
-    ./programs/spotify.nix
+    # ./programs/spotify_player.nix
+    # ./programs/spotify.nix
 
     ./programs/brave.nix
     # ./programs/vesktop.nix # No usar, hace que tengas que volver a configurar vesktop

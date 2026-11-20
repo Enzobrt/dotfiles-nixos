@@ -51,6 +51,6 @@
   };
 
   home.file."local/share/vicinae/scripts" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/enzo/Documents/Programación";
+    source = config.lib.file.mkOutOfStoreSymlink "/home/enzo/Documents/programacion";
   };
 }

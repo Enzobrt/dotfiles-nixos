@@ -104,6 +104,7 @@ in {
     gnome-calculator
     switcheroo
     #junction
+    popsicle
 
     ## Internet
     brave
@@ -247,6 +248,8 @@ in {
         mplcursors
         numpy
         random2
+        pyinstaller
+        nuitka
       ]))
   ];
 
