@@ -104,7 +104,6 @@ in {
     gnome-calculator
     switcheroo
     #junction
-    popsicle
 
     ## Internet
     brave
@@ -151,8 +150,8 @@ in {
 
     retroarch-full
     es-de
-    rpcs3
-    ryubing
+    # rpcs3
+    # ryubing
     dolphin-emu
 
     ## Media
@@ -165,7 +164,7 @@ in {
     kdePackages.kdenlive
 
     ## Automation
-    crossmacro
+    # crossmacro
 
     ## Terminal
     ghostty
